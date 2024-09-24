@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -5,11 +6,17 @@ import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import Logo from "../assets/Logo.png";
 
 const Header = () => {
+  const [expanded, setExpanded] = useState(false); // State to track the navbar expansion
+
+  const handleToggle = () => setExpanded(!expanded); // Toggle expanded state
+
+  const closeNavbar = () => setExpanded(false); // Function to close the navbar
+
   return (
     <header className="header custom-navbar">
       <div className="navigation">
         <div className="container">
-          <Navbar expand="lg">
+          <Navbar expand="lg" expanded={expanded}>
             <Container>
               <Navbar.Brand href="/">
                 <img
@@ -20,11 +27,18 @@ const Header = () => {
                   style={{ objectFit: "cover" }}
                 />
               </Navbar.Brand>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Toggle
+                aria-controls="basic-navbar-nav"
+                onClick={handleToggle}
+              />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto">
                   <Nav.Item>
-                    <Link to="/" className="text-white fw-bold px-4 nav-link">
+                    <Link
+                      to="/"
+                      className="text-white fw-bold px-4 nav-link"
+                      onClick={closeNavbar} // Close navbar on click
+                    >
                       Home
                     </Link>
                   </Nav.Item>
@@ -32,6 +46,7 @@ const Header = () => {
                     <Link
                       to="/about"
                       className="text-white fw-bold px-4 nav-link"
+                      onClick={closeNavbar} // Close navbar on click
                     >
                       About
                     </Link>
@@ -40,6 +55,7 @@ const Header = () => {
                     <Link
                       to="/gallery"
                       className="text-white fw-bold px-4 nav-link"
+                      onClick={closeNavbar} // Close navbar on click
                     >
                       Gallery
                     </Link>
@@ -48,6 +64,7 @@ const Header = () => {
                     <Link
                       to="/contact"
                       className="text-white fw-bold px-4 nav-link"
+                      onClick={closeNavbar} // Close navbar on click
                     >
                       Contact
                     </Link>
