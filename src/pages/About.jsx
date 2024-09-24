@@ -6,7 +6,7 @@ import Dinesh from "../assets/Faculty/dinesh sir.jpg";
 import Shiva from "../assets/Faculty/shivman sir.jpg";
 import Gurleen from "../assets/Team Heads/Gurleen.jpg";
 import Samiya from "../assets/Team Heads/samiya.jpg";
-import Harmeet from "../assets/Team Heads/Harmeet.jpg";
+import Harmeet from "../assets/Team Heads/harmeet.jpg";
 import Puneet from "../assets/Team Heads/puneet.png";
 import Anmol from "../assets/SubCoreTeam/anmol.jpg";
 import Assa from "../assets/SubCoreTeam/assa.jpg";
@@ -243,7 +243,7 @@ const About = () => {
           <div className="col-sm-3">
             <div className="card">
               <div className="card-img">
-                <img src={Harmeet} className="" alt="Faculty Name" />
+                <img src={Gokul} className="" alt="Faculty Name" />
               </div>
               <div className="text-center">
                 <h5 className="card_title">Gokul Malik</h5>
@@ -277,7 +277,7 @@ const About = () => {
           <div className="col-sm-3">
             <div className="card">
               <div className="card-img">
-                <img src={Hargun} className="" alt="Faculty Name" />
+                <img src="" className="" alt="Faculty Name" />
               </div>
               <div className="text-center">
                 <h5 className="card_title">Hargundeep Singh</h5>
@@ -327,7 +327,7 @@ const About = () => {
           <div className="col-sm-3">
             <div className="card">
               <div className="card-img">
-                <img src={Tanisha} className="" alt="Faculty Name" />
+                <img src="" className="" alt="Faculty Name" />
               </div>
               <div className="text-center">
                 <h5 className="card_title">Tanisha Dhawan</h5>
