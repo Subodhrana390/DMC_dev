@@ -67,7 +67,7 @@ const About = () => {
         </div>
         {/* Faculty Details */}
         <h3 className="mb-4 text-center Faculty_title">Faculty Details</h3>
-        <div className="row g-5">
+        <div className="row g-4">
           {facultyMembers.map(
             ({ name, role, image, mail, linkedIn, index }) => (
               <FacultyCard
@@ -84,7 +84,7 @@ const About = () => {
       </div>
       {/* Team Heads */}
       <h3 className="my-4 text-center Faculty_title">Core Team</h3>
-      <div className="row g-5">
+      <div className="row g-4">
         {CoreTeam.map(({ index, name, role, image, social }) => (
           <TeamMemberCard
             key={index}
