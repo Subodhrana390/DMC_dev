@@ -22,9 +22,9 @@ const Header = () => {
                 <img
                   src={Logo}
                   alt="Logo"
-                  width={80}
+                  width={150}
                   height={80}
-                  style={{ objectFit: "cover" }}
+                  style={{ objectFit: "contain" }}
                 />
               </Navbar.Brand>
               <Navbar.Toggle
@@ -36,7 +36,7 @@ const Header = () => {
                   <Nav.Item>
                     <Link
                       to="/"
-                      className="text-white fw-bold px-4 nav-link"
+                      className="text-dark fw-bold px-4 nav-link"
                       onClick={closeNavbar} // Close navbar on click
                     >
                       Home
@@ -45,7 +45,7 @@ const Header = () => {
                   <Nav.Item>
                     <Link
                       to="/about"
-                      className="text-white fw-bold px-4 nav-link"
+                      className="text-dark fw-bold px-4 nav-link"
                       onClick={closeNavbar} // Close navbar on click
                     >
                       About
@@ -54,7 +54,7 @@ const Header = () => {
                   <Nav.Item>
                     <Link
                       to="/gallery"
-                      className="text-white fw-bold px-4 nav-link"
+                      className="text-dark fw-bold px-4 nav-link"
                       onClick={closeNavbar} // Close navbar on click
                     >
                       Gallery
@@ -63,7 +63,7 @@ const Header = () => {
                   <Nav.Item>
                     <Link
                       to="/contact"
-                      className="text-white fw-bold px-4 nav-link"
+                      className="text-dark fw-bold px-4 nav-link"
                       onClick={closeNavbar} // Close navbar on click
                     >
                       Contact

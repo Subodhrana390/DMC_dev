@@ -1,35 +1,15 @@
 import React from "react";
 import Team from "../assets/hero.webp";
-import Amit from "../assets/Faculty/amit kamra  sir.jpg";
-import Jaswant from "../assets/Faculty/jaswant sir.png";
-import Dinesh from "../assets/Faculty/dinesh sir.jpg";
-import Shiva from "../assets/Faculty/shivman sir.jpg";
-import Gurleen from "../assets/Team Heads/Gurleen.jpg";
-import Samiya from "../assets/Team Heads/samiya.jpg";
-import Harmeet from "../assets/Team Heads/harmeet.jpg";
-import Puneet from "../assets/Team Heads/puneet.png";
-import Anmol from "../assets/SubCoreTeam/anmol.jpg";
-import Assa from "../assets/SubCoreTeam/assa.jpg";
-import Ayush from "../assets/SubCoreTeam/Ayush Patel.jpg";
-import Tanisha from "../assets/SubCoreTeam/dhawan.png";
-import Dilnaz from "../assets/SubCoreTeam/Dilnaz Kaur Grewal.jpg";
-import Gokul from "../assets/SubCoreTeam/Gokul.jpg";
-import Hargun from "../assets/SubCoreTeam/hargun.png";
-import Harinder from "../assets/SubCoreTeam/harinder.jpg";
-import Himanshu from "../assets/SubCoreTeam/Himanshu.jpg";
-import Harjot from "../assets/SubCoreTeam/Harjot Singh.jpg";
-import Kanika from "../assets/SubCoreTeam/kanika.jpg";
-import Nitan from "../assets/SubCoreTeam/nitan.jpg";
-import Savreet from "../assets/SubCoreTeam/Savreet Kaur.jpg";
-import SukhRaj from "../assets/SubCoreTeam/sukhraj.jpg";
-import { FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { facultyMembers, CoreTeam, SubCoreTeam } from "../data/Data";
+import FacultyCard from "../components/FacultyCard";
+import TeamMemberCard from "../components/TeamMemberCard";
 
 const About = () => {
   return (
     <div className="container py-5">
       {/* Heading Section */}
       <div className="text-center mb-0 heading_section">
-        <h1 className="display-4">About DMC</h1>
+        <h1 className="display-4 ">About DMC</h1>
         <p className="lead">
           Fosters a learning environment that encourages creativity,
           collaboration, and career growth in the field of digital marketing.
@@ -87,392 +67,46 @@ const About = () => {
         </div>
         {/* Faculty Details */}
         <h3 className="mb-4 text-center Faculty_title">Faculty Details</h3>
-        <div className="row g-4">
-          <div className="col-sm-3">
-            <div className="card">
-              <div className="card-img">
-                <img src={Amit} className="" alt="Faculty Name" />
-              </div>
-              <div className="text-center">
-                <h5 className="card_title">Dr. Amit Karma</h5>
-                <span className="cardpost">Faculty Coordinator</span>
-                <div className="social-icons">
-                  <FaInstagram />
-                  <FaLinkedin />
-                  <FaTwitter />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="card">
-              <div className="card-img">
-                <img src={Jaswant} className="" alt="Faculty Name" />
-              </div>
-              <div className="text-center">
-                <h5 className="card_title">Prof. Jaswant Singh</h5>
-                <span className="cardpost">Faculty Co-Cordinator</span>
-                <div className="social-icons">
-                  <FaInstagram />
-                  <FaLinkedin />
-                  <FaTwitter />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="card">
-              <div className="card-img">
-                <img src={Shiva} className="" alt="Faculty Name" />
-              </div>
-              <div className="text-center">
-                <h5 className="card_title">Prof. Shivamanmeet Singh</h5>
-                <span className="cardpost">Secretary</span>
-                <div className="social-icons">
-                  <FaInstagram />
-                  <FaLinkedin />
-                  <FaTwitter />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="card">
-              <div className="card-img">
-                <img src={Dinesh} className="" alt="Faculty Name" />
-              </div>
-              <div className="text-center">
-                <h5 className="card_title">Prof. Dinesh Anand</h5>
-                <span className="cardpost">Student Cordinator</span>
-                <div className="social-icons">
-                  <FaInstagram />
-                  <FaLinkedin />
-                  <FaTwitter />
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="row g-5">
+          {facultyMembers.map(
+            ({ name, role, image, mail, linkedIn, index }) => (
+              <FacultyCard
+                key={index}
+                name={name}
+                role={role}
+                image={image}
+                mail={mail}
+                linkedIn={linkedIn}
+              />
+            )
+          )}
         </div>
-        {/* Team Heads */}
-        <h3 className="my-4 text-center Faculty_title">Team Heads</h3>
-        <div className="row g-4">
-          <div className="col-sm-3">
-            <div className="card">
-              <div className="card-img">
-                <img src={Gurleen} className="" alt="Faculty Name" />
-              </div>
-              <div className="text-center">
-                <h5 className="card_title">Gurleen Kaur</h5>
-                <span className="cardpost">Covenor</span>
-                <div className="social-icons">
-                  <FaInstagram />
-                  <FaLinkedin />
-                  <FaTwitter />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="card">
-              <div className="card-img">
-                <img src={Harmeet} className="" alt="Faculty Name" />
-              </div>
-              <div className="text-center">
-                <h5 className="card_title">Harmeet Kaur</h5>
-                <span className="cardpost">Co-covevnor</span>
-                <div className="social-icons">
-                  <FaInstagram />
-                  <FaLinkedin />
-                  <FaTwitter />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="card">
-              <div className="card-img">
-                <img src={Puneet} className="" alt="Faculty Name" />
-              </div>
-              <div className="text-center">
-                <h5 className="card_title">Puneet Jain</h5>
-                <span className="cardpost">Co-conevnor</span>
-                <div className="social-icons">
-                  <FaInstagram />
-                  <FaLinkedin />
-                  <FaTwitter />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="card">
-              <div className="card-img">
-                <img src={Samiya} className="" alt="Faculty Name" />
-              </div>
-              <div className="text-center">
-                <h5 className="card_title">Samiya Seghal</h5>
-                <span className="cardpost">Secretary</span>
-                <div className="social-icons">
-                  <FaInstagram />
-                  <FaLinkedin />
-                  <FaTwitter />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Sub Core Team */}
-        <h3 className="my-4 text-center Faculty_title">Sub Core Team</h3>
-        <div className="row g-4 my-2">
-          <div className="col-sm-3">
-            <div className="card">
-              <div className="card-img">
-                <img src={Nitan} className="" alt="Faculty Name" />
-              </div>
-              <div className="text-center">
-                <h5 className="card_title">Nitan Singh</h5>
-                <span className="cardpost">Content Coordinator</span>
-                <div className="social-icons">
-                  <FaInstagram />
-                  <FaLinkedin />
-                  <FaTwitter />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="card">
-              <div className="card-img">
-                <img src={Gokul} className="" alt="Faculty Name" />
-              </div>
-              <div className="text-center">
-                <h5 className="card_title">Gokul Malik</h5>
-                <span className="cardpost">Content Coordinator</span>
-                <div className="social-icons">
-                  <FaInstagram />
-                  <FaLinkedin />
-                  <FaTwitter />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="card">
-              <div className="card-img">
-                <img src={SukhRaj} className="" alt="Faculty Name" />
-              </div>
-              <div className="text-center">
-                <h5 className="card_title">Sukhraj Singh</h5>
-                <span className="cardpost">
-                  Event Management and Discipline Head
-                </span>
-                <div className="social-icons">
-                  <FaInstagram />
-                  <FaLinkedin />
-                  <FaTwitter />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="card">
-              <div className="card-img">
-                <img src="" className="" alt="Faculty Name" />
-              </div>
-              <div className="text-center">
-                <h5 className="card_title">Hargundeep Singh</h5>
-                <span className="cardpost">Social Media Head</span>
-                <div className="social-icons">
-                  <FaInstagram />
-                  <FaLinkedin />
-                  <FaTwitter />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="row g-4 my-2">
-          <div className="col-sm-3">
-            <div className="card">
-              <div className="card-img">
-                <img src={Kanika} className="" alt="Faculty Name" />
-              </div>
-              <div className="text-center">
-                <h5 className="card_title">Kanika Mittal</h5>
-                <span className="cardpost">Design Head</span>
-                <div className="social-icons">
-                  <FaInstagram />
-                  <FaLinkedin />
-                  <FaTwitter />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="card">
-              <div className="card-img">
-                <img src={Ayush} className="" alt="Faculty Name" />
-              </div>
-              <div className="text-center">
-                <h5 className="card_title">Ayush Patel</h5>
-                <span className="cardpost">Design Head</span>
-                <div className="social-icons">
-                  <FaInstagram />
-                  <FaLinkedin />
-                  <FaTwitter />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="card">
-              <div className="card-img">
-                <img src="" className="" alt="Faculty Name" />
-              </div>
-              <div className="text-center">
-                <h5 className="card_title">Tanisha Dhawan</h5>
-                <span className="cardpost">Photography Head</span>
-                <div className="social-icons">
-                  <FaInstagram />
-                  <FaLinkedin />
-                  <FaTwitter />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="card">
-              <div className="card-img">
-                <img src={Harjot} className="" alt="Faculty Name" />
-              </div>
-              <div className="text-center">
-                <h5 className="card_title">Harjot Singh</h5>
-                <span className="cardpost">Photography Head</span>
-                <div className="social-icons">
-                  <FaInstagram />
-                  <FaLinkedin />
-                  <FaTwitter />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="row g-4 my-2">
-          <div className="col-sm-3">
-            <div className="card">
-              <div className="card-img">
-                <img src={Harinder} className="" alt="Faculty Name" />
-              </div>
-              <div className="text-center">
-                <h5 className="card_title">Harinder Singh</h5>
-                <span className="cardpost">Videography Head</span>
-                <div className="social-icons">
-                  <FaInstagram />
-                  <FaLinkedin />
-                  <FaTwitter />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="card">
-              <div className="card-img">
-                <img src={Himanshu} className="" alt="Faculty Name" />
-              </div>
-              <div className="text-center">
-                <h5 className="card_title">Himanshu Gambhir</h5>
-                <span className="cardpost">Videography Head</span>
-                <div className="social-icons">
-                  <FaInstagram />
-                  <FaLinkedin />
-                  <FaTwitter />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="card">
-              <div className="card-img">
-                <img src={Savreet} className="" alt="Faculty Name" />
-              </div>
-              <div className="text-center">
-                <h5 className="card_title">Savreet Kaur</h5>
-                <span className="cardpost">Reels Head</span>
-                <div className="social-icons">
-                  <FaInstagram />
-                  <FaLinkedin />
-                  <FaTwitter />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="card">
-              <div className="card-img">
-                <img src={Anmol} className="" alt="Faculty Name" />
-              </div>
-              <div className="text-center">
-                <h5 className="card_title">Anmol Kumar</h5>
-                <span className="cardpost">Reels Head</span>
-                <div className="social-icons">
-                  <FaInstagram />
-                  <FaLinkedin />
-                  <FaTwitter />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="row g-4 my-2">
-          <div className="col-sm-3">
-            <div className="card">
-              <div className="card-img">
-                <img src="" className="" alt="Faculty Name" />
-              </div>
-              <div className="text-center">
-                <h5 className="card_title">Tarandeep Kaur</h5>
-                <span className="cardpost">Techanical and Database Head</span>
-                <div className="social-icons">
-                  <FaInstagram />
-                  <FaLinkedin />
-                  <FaTwitter />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="card">
-              <div className="card-img">
-                <img src={Assa} className="" alt="Faculty Name" />
-              </div>
-              <div className="text-center">
-                <h5 className="card_title">Assa Singh</h5>
-                <span className="cardpost">Techanical and Database Head</span>
-                <div className="social-icons">
-                  <FaInstagram />
-                  <FaLinkedin />
-                  <FaTwitter />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="card">
-              <div className="card-img">
-                <img src={Dilnaz} className="" alt="Faculty Name" />
-              </div>
-              <div className="text-center">
-                <h5 className="card_title">Dilnaz Kaur Grewal</h5>
-                <span className="cardpost">Content and Documentation Head</span>
-                <div className="social-icons">
-                  <FaInstagram />
-                  <FaLinkedin />
-                  <FaTwitter />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
+      {/* Team Heads */}
+      <h3 className="my-4 text-center Faculty_title">Core Team</h3>
+      <div className="row g-5">
+        {CoreTeam.map(({ index, name, role, image, social }) => (
+          <TeamMemberCard
+            key={index}
+            name={name}
+            role={role}
+            image={image}
+            social={social}
+          />
+        ))}
+      </div>
+      {/* Sub Core Team */}
+      <h3 className="my-4 text-center Faculty_title">Sub Core Team</h3>
+      <div className="row g-4">
+        {SubCoreTeam.map(({ index, name, role, image, social }) => (
+          <TeamMemberCard
+            key={index}
+            name={name}
+            role={role}
+            image={image}
+            social={social}
+          />
+        ))}
       </div>
     </div>
   );
