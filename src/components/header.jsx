@@ -40,7 +40,7 @@ const Header = () => {
                     <a
                       onClick={() => {
                         navigate("/");
-                        closeNavbar;
+                        closeNavbar();
                       }}
                       className="text-dark fw-bold px-4 nav-link"
                     >
@@ -51,7 +51,7 @@ const Header = () => {
                     <a
                       onClick={() => {
                         navigate("/about");
-                        closeNavbar;
+                        closeNavbar();
                       }}
                       className="text-dark fw-bold px-4 nav-link"
                     >
@@ -62,7 +62,7 @@ const Header = () => {
                     <a
                       onClick={() => {
                         navigate("/events");
-                        closeNavbar;
+                        closeNavbar();
                       }}
                       className="text-dark fw-bold px-4 nav-link"
                     >
@@ -73,7 +73,7 @@ const Header = () => {
                     <a
                       onClick={() => {
                         navigate("/contact");
-                        closeNavbar;
+                        closeNavbar();
                       }}
                       className="text-dark fw-bold px-4 nav-link"
                     >
