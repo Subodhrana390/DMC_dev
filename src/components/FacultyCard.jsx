@@ -7,7 +7,7 @@ const FacultyCard = ({ key, image, name, role, mail, linkedIn }) => {
     <div
       className="col-sm-3"
       key={key}
-      style={{ paddingInline: window.innerWidth < 576 ? "70px" : "16px" }}
+      style={{ paddingInline: window.innerWidth < 576 ? "35px" : "16px" }}
     >
       <div className="card">
         <div className="card-img">

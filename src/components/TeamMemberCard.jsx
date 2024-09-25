@@ -5,9 +5,9 @@ import { IoMdMail } from "react-icons/io";
 const TeamMemberCard = ({ key, image, name, role, social }) => {
   return (
     <div
-      className="col-sm-3"
+      className="col-sm-3 TeamMemberCard"
       key={key}
-      style={{ paddingInline: window.innerWidth < 576 ? "70px" : "16px" }}
+      style={{ paddingInline: window.innerWidth < 576 ? "35px" : "16px" }}
     >
       <div className="card">
         <div className="card-img">

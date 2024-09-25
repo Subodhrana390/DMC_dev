@@ -60,6 +60,7 @@
 .custom-navbar .nav-link {
   position: relative;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
 .custom-navbar .nav-link:hover {
@@ -742,14 +743,15 @@
   font-weight: 600;
 }
 
-.card {
+.team_section .card,
+.TeamMemberCard .card {
   position: relative;
   width: 100%;
   height: 350px;
   padding: 10px;
+  border: none;
   background: url("./assets/card-bg.jpg");
-  border: 2px solid #fff;
-  border-radius: 59px;
+  border-radius: 20px;
   transition: transform 0.2s ease;
   overflow: hidden;
 }
@@ -777,13 +779,14 @@
 }
 
 .circle {
+  visibility: hidden;
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   background-color: #007bff;
   border-radius: 50%;
   top: -100%;
-  left: -80%;
+  left:-20%;
   z-index: -1;
   transition: all 0.3s ease-in-out;
 }
@@ -797,8 +800,8 @@
 }
 
 .card:hover .circle {
-  top: -30%;
-  left:-10%;
+  visibility: visible;
+  top: -60%;
 }
 .card-body {
   background-color: #f8f9fa;
@@ -814,18 +817,201 @@
   font-weight: 500;
 }
 
-.social-icons {
+.card .social-icons {
   display: flex;
   justify-content: center;
   margin-top: 10px;
 }
 
-.social-icons svg {
+.social-icons a svg { 
+  margin: 0 10px;
+  transition: all 0.3s ease-in-out;
+}
+.social-icons a:nth-child(1) svg{
+  color: blue;
+  margin: 0 10px;
+  transition: all 0.3s ease-in-out;
+}
+.social-icons a:nth-child(2) svg{
   color: black;
   margin: 0 10px;
   transition: all 0.3s ease-in-out;
 }
+.social-icons a:nth-child(3) svg{
+  color: orangered;
+  margin: 0 10px;
+  transition: all 0.3s ease-in-out;
+}
 
-.social-icons svg:hover {
+.social-icons a svg:hover {
   transform: scale(1.2);
+}
+
+/* Events Pages  */
+
+.Events {
+  width: 100%;
+}
+/* General Event Section Styles */
+
+.Events .event_List {
+  padding: 20px 120px;
+  background-color: wheat;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the cards */
+}
+
+/* Event List Heading */
+.event_List h1 {
+  color: var(--navColor);
+  font-size: 30px;
+  font-weight: 800;
+}
+
+/* Event Card Styles */
+.event_List .Event_Card {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  background-color: #fff;
+  padding: 0;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 10px;
+}
+
+/* Hover Effect */
+.Event_Card:hover {
+  box-shadow: 0 8px 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Event Card Image */
+.Event_Card_img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.Event_Card_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* Event Card Content */
+.Event_Card_content {
+  padding: 1rem;
+}
+
+/* Title */
+.Event_Card_content .event_title {
+  font-size: 1.25rem; /* 20px */
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Event Date */
+.Event_Card_content .event_Date {
+  color: orange;
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.Event_Card_content .event_Date svg {
+  margin-right: 0.5rem;
+}
+
+/* Description */
+.Event_Card_content .event_description {
+  text-align: justify;
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+/* Button */
+.Event_Card_content button {
+  border: none;
+  background-color: var(--navColor);
+  border-radius: 5px;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  font-size: 0.875rem; /* 14px */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Event_Card_content button:hover {
+  background-color: #524781;
+}
+
+/* Responsive Styles */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .Events .event_List {
+    padding: 20px 50px; /* Reduce padding */
+  }
+
+  .event_List .Event_Card {
+    max-width: 320px; /* Smaller card size */
+  }
+
+  .event_List h1 {
+    font-size: 28px; /* Slightly smaller heading */
+  }
+
+  .Event_Card_content .event_title {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  .Event_Card_content .event_description {
+    font-size: 0.8125rem; /* 13px */
+  }
+
+  .Event_Card_content button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8125rem; /* 13px */
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .Events .event_List {
+    padding: 20px 30px; /* Further reduce padding */
+    display: block; /* Stack the cards vertically */
+  }
+
+  .event_List .Event_Card {
+    max-width: 100%; /* Full width */
+    margin-bottom: 20px; /* Space between stacked cards */
+  }
+
+  .event_List h1 {
+    font-size: 24px; /* Smaller heading */
+  }
+
+  .Event_Card_content .event_title {
+    font-size: 1rem; /* 16px */
+  }
+
+  .Event_Card_content .event_description {
+    font-size: 0.75rem; /* 12px */
+  }
+
+  .Event_Card_content button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem; /* 12px */
+  }
 }

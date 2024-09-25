@@ -2,7 +2,7 @@ import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { Link, useNavigate } from "react-router-dom"; // Import Link from react-router-dom
 import Logo from "../assets/Logo.png";
 
 const Header = () => {
@@ -10,7 +10,9 @@ const Header = () => {
 
   const handleToggle = () => setExpanded(!expanded); // Toggle expanded state
 
-  const closeNavbar = () => setExpanded(false); // Function to close the navbar
+  const closeNavbar = () => setExpanded(false);
+
+  const navigate = useNavigate();
 
   return (
     <header className="header custom-navbar">
@@ -34,40 +36,48 @@ const Header = () => {
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto">
                   <Nav.Item>
-                    <Link
-                      to="/"
+                    <a
+                      onClick={() => {
+                        navigate("/");
+                        closeNavbar;
+                      }}
                       className="text-dark fw-bold px-4 nav-link"
-                      onClick={closeNavbar} // Close navbar on click
                     >
                       Home
-                    </Link>
+                    </a>
                   </Nav.Item>
                   <Nav.Item>
-                    <Link
-                      to="/about"
+                    <a
+                      onClick={() => {
+                        navigate("/about");
+                        closeNavbar;
+                      }}
                       className="text-dark fw-bold px-4 nav-link"
-                      onClick={closeNavbar} // Close navbar on click
                     >
                       About
-                    </Link>
+                    </a>
                   </Nav.Item>
                   <Nav.Item>
-                    <Link
-                      to="/gallery"
+                    <a
+                      onClick={() => {
+                        navigate("/events");
+                        closeNavbar;
+                      }}
                       className="text-dark fw-bold px-4 nav-link"
-                      onClick={closeNavbar} // Close navbar on click
                     >
-                      Gallery
-                    </Link>
+                      Events
+                    </a>
                   </Nav.Item>
                   <Nav.Item>
-                    <Link
-                      to="/contact"
+                    <a
+                      onClick={() => {
+                        navigate("/contact");
+                        closeNavbar;
+                      }}
                       className="text-dark fw-bold px-4 nav-link"
-                      onClick={closeNavbar} // Close navbar on click
                     >
                       Contact
-                    </Link>
+                    </a>
                   </Nav.Item>
                 </Nav>
               </Navbar.Collapse>
