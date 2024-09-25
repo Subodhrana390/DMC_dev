@@ -24,16 +24,16 @@ const Footer = () => {
               <a href="">
                 <IoMdMail />
               </a>
-              <a href="">
+              <a href=" https://www.facebook.com/official.gndec">
                 <FaFacebook />
               </a>
-              <a href="">
+              <a href="http://bit.ly/4eVXRQF">
                 <FaYoutube />
               </a>
-              <a href="">
+              <a href="http://bit.ly/3Wg4Axx">
                 <FaLinkedin />
               </a>
-              <a href="">
+              <a href="http://bit.ly/3W18Gbr">
                 <FaInstagram />
               </a>
             </div>
@@ -45,9 +45,9 @@ const Footer = () => {
             <h5>DMC, GNDEC</h5>
           </div>
           <div className="Links">
-            <a href="">Home</a>
-            <a href="">Faculty</a>
-            <a href="">Events</a>
+            <a href="/">Home</a>
+            <a href="/">Faculty</a>
+            <a href="/events">Events</a>
             <a href="">Members</a>
             <a href="">Contact</a>
             <a href="">Web Developer</a>
