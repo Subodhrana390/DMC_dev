@@ -30,8 +30,9 @@ const Header = () => {
                 />
               </Navbar.Brand>
               <Navbar.Toggle
-                aria-controls="basic-navbar-nav"
+                aria-controls="navbar-nav"
                 onClick={handleToggle}
+                className="custom-navbar-toggle"
               />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto">

@@ -51,6 +51,20 @@
   position: relative;
 }
 
+.header .custom-navbar-toggle {
+  border: none !important;   /* Ensures no border */
+  color: black !important;    /* Sets the icon color to black */
+  outline: none !important;   /* Removes any outline (focus outline) */
+  box-shadow: none !important; /* Removes any box-shadow (sometimes browsers apply this) */
+}
+
+/* Remove the border when focused or hovered */
+.custom-navbar-toggle:focus,.custom-navbar-toggle:hover {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;  /* Prevents any shadow from appearing on focus */
+}
+
 @media (max-width: 768px) {
   .custom-navbar {
     padding: 12px 10px;
@@ -786,7 +800,7 @@
   background-color: #007bff;
   border-radius: 50%;
   top: -100%;
-  left:-20%;
+  left: -20%;
   z-index: -1;
   transition: all 0.3s ease-in-out;
 }
@@ -823,21 +837,21 @@
   margin-top: 10px;
 }
 
-.social-icons a svg { 
+.social-icons a svg {
   margin: 0 10px;
   transition: all 0.3s ease-in-out;
 }
-.social-icons a:nth-child(1) svg{
+.social-icons a:nth-child(1) svg {
   color: blue;
   margin: 0 10px;
   transition: all 0.3s ease-in-out;
 }
-.social-icons a:nth-child(2) svg{
+.social-icons a:nth-child(2) svg {
   color: black;
   margin: 0 10px;
   transition: all 0.3s ease-in-out;
 }
-.social-icons a:nth-child(3) svg{
+.social-icons a:nth-child(3) svg {
   color: orangered;
   margin: 0 10px;
   transition: all 0.3s ease-in-out;
