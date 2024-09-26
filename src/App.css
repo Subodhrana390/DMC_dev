@@ -395,6 +395,7 @@
 }
 
 /* Footer  */
+
 /* General Styling for NewsLetter Section */
 .newsLetter_section {
   height: 200px;
@@ -698,16 +699,22 @@
     padding: 20px 30px;
   }
 
+  .footer_Section .footer_1 {
+    justify-content: center;
+  }
+
   .img_footer img {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
   }
 
   .footer_1 .footer_title {
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: 900;
   }
 
   .followUs_Section h5 {
+    text-align: left;
     font-size: 12px;
   }
 
@@ -1073,4 +1080,198 @@
 .form-control:focus {
   border-color: #a979ff;
   box-shadow: 0 0 0 0.25rem rgb(103, 58,  183 , 0.21);
+}
+
+/* Developer */
+
+.developer {
+  text-align: center;
+}
+
+.developer h1 {
+  color:black;
+  user-select: none;
+  font-weight: bolder;
+  margin-block: 30px;
+  text-shadow: 2px 2px 50px rgba(0, 0, 0, 0.3);
+}
+
+.developer .contributor{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 20px;
+}
+/* Developer Card  */
+.developer .developer_card {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+  box-shadow: 1px 1px 15px #000;
+  border-radius: 10px;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.developer .developer_card_img {
+  width: 200px;
+  height: 200px;
+  background-color: #6d5d8f;
+  border-radius: 50%;
+  padding: 4px;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.developer_card_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.developer_card .developer_card_body {
+  padding: 10px;
+}
+
+.developer_card_body .developer_card_title {
+  margin-top: 5px;
+  font-family: "Merienda", cursive;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.developer_card_body .developer_card_desc {
+  font-family: "Merienda", cursive;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.developer_card .developer_card_content {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 2;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.developer_card:hover .developer_card_content {
+  background-image: linear-gradient(to right bottom, #141414, #221e41, #2f2771, #422ba2, #5e2ad4);
+  visibility: visible;
+  opacity: 1;
+}
+
+.developer_card:hover .developer_card_body {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.developer_card_content .developer_card_content_img {
+  width: 100%;
+  height: 250px;
+  background-color: transparent;
+}
+
+.developer_card_content .developer_card_content_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.developer_card_content .developer_card_content_body {
+  padding: 10px;
+}
+.developer_card_content .developer_card_content_body .developer_card_content_desc {
+font-size: 14px;
+text-transform: uppercase;
+color: white;
+font-weight: 700;
+}
+
+.developer_card_content_social_icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.developer_card_content_social_icons a {
+  margin: 0 10px;
+  color: #6d5d8f;
+  font-size: 20px;
+}
+
+.developer_card_content_social_icons a:nth-child(1) svg {
+  color: white;
+  transition: color 0.3s ease-in-out; /* Smooth transition */
+}
+
+.developer_card_content_social_icons a:nth-child(1):hover svg {
+  color: #f0f0f0; /* Lighten the color when hovered */
+}
+
+.developer_card_content_social_icons a:nth-child(2) svg {
+  color: black;
+  transition: color 0.3s ease-in-out;
+}
+
+.developer_card_content_social_icons a:nth-child(2):hover svg {
+  color: #707070; /* Light gray for hover effect */
+}
+
+.developer_card_content_social_icons a:nth-child(3) svg {
+  color: var(--pink);
+  transition: color 0.3s ease-in-out;
+}
+
+.developer_card_content_social_icons a:nth-child(3):hover svg {
+  color: #ffb6c1; /* Lighten pink for hover effect */
+}
+
+@media (max-width: 768px) {
+  .developer h1 {
+    font-size: 24px;
+  }
+
+  .developer_card_body .developer_card_title {
+    font-size: 18px;
+  }
+
+  .developer_card_body .developer_card_desc {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .developer_card {
+    max-width: 100%;
+  }
+
+  .developer_card_img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .developer_card_body .developer_card_title {
+    font-size: 16px;
+  }
+
+  .developer_card_body .developer_card_desc {
+    font-size: 9px;
+  }
 }

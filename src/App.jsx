@@ -6,6 +6,7 @@ import Events from "./pages/Events";
 import Contact from "./components/Contact";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Developer from "./pages/Developer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/events" element={<Events />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/developer" element={<Developer />} />
       </Routes>
       <Footer />
     </Router>

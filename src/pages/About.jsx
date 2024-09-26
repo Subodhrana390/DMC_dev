@@ -60,7 +60,7 @@ const About = () => {
       </div>
 
       {/* Team Section */}
-      <div className="team_section">
+      <div className="team_section" id="members">
         {/* DMC Team Heading */}
         <div className="text-center my-5">
           <h2 className="display-5">DMC Team</h2>
