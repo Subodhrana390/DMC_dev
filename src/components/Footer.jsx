@@ -21,7 +21,7 @@ const Footer = () => {
           <div className="followUs_Section">
             <h5>Follow Us</h5>
             <div className="follows_icon">
-              <a href="">
+              <a href="mail:gndecdigitalmarketing@gmail.com">
                 <IoMdMail />
               </a>
               <a href=" https://www.facebook.com/official.gndec">
