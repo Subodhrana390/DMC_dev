@@ -9,7 +9,7 @@ const About = () => {
     <div className="container py-5">
       {/* Heading Section */}
       <div className="text-center mb-0 heading_section">
-        <h1 className="display-4 ">About DMC</h1>
+        <h1 className="display-4 about_title">About DMC</h1>
         <p className="lead">
           Fosters a learning environment that encourages creativity,
           collaboration, and career growth in the field of digital marketing.

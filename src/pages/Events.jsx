@@ -6,7 +6,7 @@ const Events = () => {
   return (
     <div className="Events">
       <div className="event_List">
-        <h1>Previous Happened Events</h1>
+        <h1>Events</h1>
       </div>
       <div className="event_List row g-4">
         <div className="Event_Card col-sm-3">

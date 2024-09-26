@@ -40,10 +40,6 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer_2">
-          <div className="location">
-            <IoMdMap />
-            <h5>DMC, GNDEC</h5>
-          </div>
           <div className="Links">
             <a href="/">Home</a>
             <a href="/">Faculty</a>
