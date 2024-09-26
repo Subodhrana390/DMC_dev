@@ -3,7 +3,7 @@ import plane from "../assets/plane.png";
 
 const Contact = () => {
   return (
-    <section class="uf-contact-form-01 mx-auto">
+    <section class="contact uf-contact-form-01 mx-auto">
       <div class="container">
         <div class="row justify-content-center bg-white rounded-4 shadow py-5 gx-5 px-lg-5">
           <div class="col-md-6 text-center">

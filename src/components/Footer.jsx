@@ -42,9 +42,9 @@ const Footer = () => {
         <div className="footer_2">
           <div className="Links">
             <a href="/">Home</a>
-            <a href="/">Faculty</a>
+            <a href="/faculty">Faculty</a>
             <a href="/events">Events</a>
-            <a href="/events">Members</a>
+            <a href="/members">Members</a>
             <a href="/contact">Contact</a>
             <a href="/developer">Web Developer</a>
           </div>

@@ -7,6 +7,8 @@ import Contact from "./components/Contact";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Developer from "./pages/Developer";
+import Members from "./pages/Members";
+import Faculty from "./pages/Faculty";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/events" element={<Events />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/members" element={<Members />} />
+        <Route path="/faculty" element={<Faculty />} />
         <Route path="/developer" element={<Developer />} />
       </Routes>
       <Footer />

@@ -593,7 +593,9 @@
   width: 100px;
   height: 100px;
   object-fit: contain;
-  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5)); /* Elegant shadow effect */
+  filter: drop-shadow(
+    2px 4px 6px rgba(0, 0, 0, 0.5)
+  ); /* Elegant shadow effect */
 }
 
 .footer_1 .footer_title {
@@ -778,8 +780,6 @@
   }
 }
 
-
-
 /* About Section  */
 
 .heading_section {
@@ -816,9 +816,7 @@
   margin-bottom: 20px;
   font-weight: 600;
 }
-
-.team_section .card,
-.TeamMemberCard .card {
+.card {
   position: relative;
   width: 100%;
   height: 350px;
@@ -931,7 +929,7 @@
 /* Event List Heading */
 .event_List h1 {
   color: #fff; /* Set a white fallback color */
-  font-size: 48px;
+  font-size: 60px;
   text-align: center;
   user-select: none;
   font-weight: bold;
@@ -1117,11 +1115,18 @@
 }
 
 /* Contact  */
+.contact{
+  padding: 30px;
+}
 .uf-contact-form-01 {
   /* background-image: linear-gradient(45deg, #864ef2, #6755f4); */
   max-width: 900px;
 }
 @media (min-width: 576px) {
+
+  .contact{
+    margin: 0 20px;
+  }
   .uf-contact-form-01 {
     min-height: 100vh;
     align-content: center;
@@ -1161,7 +1166,6 @@
 }
 
 /* Developer */
-
 .developer {
   text-align: center;
   height: 80vh;
@@ -1386,5 +1390,92 @@
 
   .developer_card_body .developer_card_desc {
     font-size: 9px;
+  }
+}
+
+/* Members Page */
+
+.members {
+  padding: 50px 120px;
+}
+.members h1 {
+  color: #fff; /* Set a white fallback color */
+  font-size: 60px;
+  text-align: center;
+  user-select: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3),
+    -2px -2px 8px rgba(255, 255, 255, 0.5); /* Vibrant dual shadow effect */
+  line-height: 1.5;
+  margin-block: 50px;
+  font-family: "Poppins", sans-serif; /* Modern, clean font */
+  background: linear-gradient(
+    90deg,
+    #ff6b6b,
+    #fddb92,
+    #1dd1a1,
+    #48dbfb,
+    #9b59b6
+  ); /* Vibrant color gradient */
+  -webkit-background-clip: text; /* Shows gradient in text */
+  -webkit-text-fill-color: transparent; /* Makes the gradient visible in text */
+  transition: all 0.3s ease;
+}
+
+.members h1:hover {
+  transform: scale(1.1);
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Enhanced shadow with hover */
+  filter: brightness(1.2); /* Makes colors more vibrant on hover */
+}
+
+@media (max-width: 480px) {
+  .members {
+    padding: 30px;
+  }
+}
+
+/* Faculty  */
+.faculty {
+  padding: 50px 120px;
+}
+.faculty h1 {
+  color: #fff; /* Set a white fallback color */
+  font-size: 60px;
+  text-align: center;
+  user-select: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3),
+    -2px -2px 8px rgba(255, 255, 255, 0.5); /* Vibrant dual shadow effect */
+  line-height: 1.5;
+  margin-block: 50px;
+  font-family: "Poppins", sans-serif; /* Modern, clean font */
+  background: linear-gradient(
+    90deg,
+    #ff6b6b,
+    #fddb92,
+    #1dd1a1,
+    #48dbfb,
+    #9b59b6
+  ); /* Vibrant color gradient */
+  -webkit-background-clip: text; /* Shows gradient in text */
+  -webkit-text-fill-color: transparent; /* Makes the gradient visible in text */
+  transition: all 0.3s ease;
+}
+
+.faculty h1:hover {
+  transform: scale(1.1);
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Enhanced shadow with hover */
+  filter: brightness(1.2); /* Makes colors more vibrant on hover */
+}
+
+@media (max-width: 480px) {
+  .members {
+    padding: 30px;
   }
 }

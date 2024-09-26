@@ -58,56 +58,6 @@ const About = () => {
           </p>
         </div>
       </div>
-
-      {/* Team Section */}
-      <div className="team_section" id="members">
-        {/* DMC Team Heading */}
-        <div className="text-center my-5">
-          <h2 className="display-5">DMC Team</h2>
-        </div>
-        {/* Faculty Details */}
-        <h3 className="mb-4 text-center Faculty_title">Faculty Details</h3>
-        <div className="row g-4">
-          {facultyMembers.map(
-            ({ name, role, image, mail, linkedIn, index }) => (
-              <FacultyCard
-                key={index}
-                name={name}
-                role={role}
-                image={image}
-                mail={mail}
-                linkedIn={linkedIn}
-              />
-            )
-          )}
-        </div>
-      </div>
-      {/* Team Heads */}
-      <h3 className="my-4 text-center Faculty_title">Core Team</h3>
-      <div className="row g-4">
-        {CoreTeam.map(({ index, name, role, image, social }) => (
-          <TeamMemberCard
-            key={index}
-            name={name}
-            role={role}
-            image={image}
-            social={social}
-          />
-        ))}
-      </div>
-      {/* Sub Core Team */}
-      <h3 className="my-4 text-center Faculty_title">Sub Core Team</h3>
-      <div className="row g-4">
-        {SubCoreTeam.map(({ index, name, role, image, social }) => (
-          <TeamMemberCard
-            key={index}
-            name={name}
-            role={role}
-            image={image}
-            social={social}
-          />
-        ))}
-      </div>
     </div>
   );
 };
