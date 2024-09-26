@@ -16,7 +16,7 @@ const Contact = () => {
                 href="gagandeepsingh05668gmail.com"
                 class="text-decoration-none"
               >
-                Gagandeepsingh05668@gmail.com
+                gndecdigitalmarketing@gmail.com
               </a>
             </p>
             <img
