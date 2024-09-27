@@ -16,13 +16,13 @@ const Contact = () => {
                 href="gagandeepsingh05668gmail.com"
                 class="text-decoration-none"
               >
-                gndecdigitalmarketing@gmail.com
+                {"  "}   gndecdigitalmarketing@gmail.com
               </a>
             </p>
             <img
               src={plane}
               alt=""
-              class="uf-img-contact-form-01 pt-4 d-md-block d-none"
+              class="uf-img-contact-form-01 pt-4 d-md-block d-none" loading="lazy"
             />
           </div>
           <div class="col-md-6">

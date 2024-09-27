@@ -10,8 +10,8 @@ const Footer = () => {
       <div className="footer_Section">
         <div className="footer_1">
           <div className="img_footer">
-            <img src={Logo} alt="DMC_Logo" />
-            <img src={GNDEC_Logo} alt="GNDEC_Logo" />
+            <img src={Logo} alt="DMC_Logo" loading="lazy" />
+            <img src={GNDEC_Logo} alt="GNDEC_Logo" loading="lazy" />
           </div>
 
           <h1 className="footer_title">

@@ -26,7 +26,7 @@ const About = () => {
         </a>
       </div>
       <div className="right">
-        <img src={Logo} alt="DMC Logo" />
+        <img src={Logo} alt="DMC Logo" loading="lazy" />
       </div>
     </div>
   );

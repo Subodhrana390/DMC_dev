@@ -574,7 +574,7 @@
   display: flex;
   justify-content: space-between;
   padding: 50px 150px;
-  background: linear-gradient(180deg, #cccccc, #6f42c1, #8e44ad, #555555);
+  background: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
   color: white;
 }
 
@@ -971,7 +971,7 @@
 .event_List .Event_Card {
   width: 100%;
   max-width: 300px;
-  height: auto;
+  height: max-content;
   background-color: #fff;
   padding: 0;
   border-radius: 20px;

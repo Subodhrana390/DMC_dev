@@ -26,7 +26,7 @@ const Header = () => {
                   alt="Logo"
                   width={150}
                   height={80}
-                  style={{ objectFit: "contain" }}
+                  style={{ objectFit: "contain" }} loading="lazy"
                 />
               </Navbar.Brand>
               <Navbar.Toggle

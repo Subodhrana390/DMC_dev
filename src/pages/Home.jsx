@@ -1,17 +1,18 @@
-import React from "react";
-import HeroSection from "../components/HeroSection";
-import About from "../components/About";
-import JoinNow from "../components/JoinNow";
-import NewsSection from "../components/NewsSection";
+import React, { lazy, Suspense } from "react";
+
+const HeroSection = lazy(() => import("../components/HeroSection"));
+const About = lazy(() => import("../components/About"));
+const JoinNow = lazy(() => import("../components/JoinNow"));
+const NewsSection = lazy(() => import("../components/NewsSection"));
 
 const Home = () => {
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
       <HeroSection />
       <About />
       <JoinNow />
       <NewsSection />
-    </>
+    </Suspense>
   );
 };
 
