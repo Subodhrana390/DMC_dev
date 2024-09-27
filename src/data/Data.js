@@ -22,6 +22,7 @@ import Kanika from "../assets/SubCoreTeam/kanika.jpg";
 import Nitan from "../assets/SubCoreTeam/nitan.jpg";
 import Savreet from "../assets/SubCoreTeam/Savreet Kaur.jpg";
 import SukhRaj from "../assets/SubCoreTeam/sukhraj.jpg";
+import Tarandeep from "../assets/SubCoreTeam/Tarandeep.png";
 
 export const facultyMembers = [
   {
@@ -221,7 +222,7 @@ export const SubCoreTeam = [
   {
     name: "Tarandeep Kaur",
     role: "Technical and Database Head",
-    image: "",
+    image: Tarandeep,
     social: {
       instagram: "https://instagram.com/tarandeep",
       linkedin: "https://linkedin.com/in/tarandeep",

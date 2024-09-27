@@ -15,7 +15,7 @@ const FacultyCard = ({ key, image, name, role, mail, linkedIn }) => {
 
   return (
     <div
-      className="col-sm-3"
+      className="col-sm-3 FacultyCard"
       key={key}
       style={{ paddingInline: window.innerWidth < 576 ? "35px" : "16px" }}
       data-aos={key % 2 === 0 ? "fade-left" : "fade-right"}

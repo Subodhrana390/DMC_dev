@@ -2,13 +2,13 @@ import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link, useNavigate } from "react-router-dom"; // Import Link from react-router-dom
+import { useNavigate } from "react-router-dom";
 import Logo from "../assets/Logo.png";
 
 const Header = () => {
-  const [expanded, setExpanded] = useState(false); // State to track the navbar expansion
+  const [expanded, setExpanded] = useState(false);
 
-  const handleToggle = () => setExpanded(!expanded); // Toggle expanded state
+  const handleToggle = () => setExpanded(!expanded);
 
   const closeNavbar = () => setExpanded(false);
 
@@ -26,7 +26,8 @@ const Header = () => {
                   alt="Logo"
                   width={150}
                   height={80}
-                  style={{ objectFit: "contain" }} loading="lazy"
+                  style={{ objectFit: "contain" }}
+                  loading="lazy"
                 />
               </Navbar.Brand>
               <Navbar.Toggle
@@ -36,50 +37,42 @@ const Header = () => {
               />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto">
-                  <Nav.Item>
-                    <a
-                      onClick={() => {
-                        navigate("/");
-                        closeNavbar();
-                      }}
-                      className="text-dark fw-bold px-4 nav-link"
-                    >
-                      Home
-                    </a>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <a
-                      onClick={() => {
-                        navigate("/about");
-                        closeNavbar();
-                      }}
-                      className="text-dark fw-bold px-4 nav-link"
-                    >
-                      About
-                    </a>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <a
-                      onClick={() => {
-                        navigate("/events");
-                        closeNavbar();
-                      }}
-                      className="text-dark fw-bold px-4 nav-link"
-                    >
-                      Events
-                    </a>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <a
-                      onClick={() => {
-                        navigate("/contact");
-                        closeNavbar();
-                      }}
-                      className="text-dark fw-bold px-4 nav-link"
-                    >
-                      Contact
-                    </a>
-                  </Nav.Item>
+                  <Nav.Link
+                    onClick={() => {
+                      navigate("/");
+                      closeNavbar();
+                    }}
+                    className="text-dark fw-bold px-4 nav-link"
+                  >
+                    Home
+                  </Nav.Link>
+                  <Nav.Link
+                    onClick={() => {
+                      navigate("/about");
+                      closeNavbar();
+                    }}
+                    className="text-dark fw-bold px-4 nav-link"
+                  >
+                    About
+                  </Nav.Link>
+                  <Nav.Link
+                    onClick={() => {
+                      navigate("/events");
+                      closeNavbar();
+                    }}
+                    className="text-dark fw-bold px-4 nav-link"
+                  >
+                    Events
+                  </Nav.Link>
+                  <Nav.Link
+                    onClick={() => {
+                      navigate("/contact");
+                      closeNavbar();
+                    }}
+                    className="text-dark fw-bold px-4 nav-link"
+                  >
+                    Contact
+                  </Nav.Link>
                 </Nav>
               </Navbar.Collapse>
             </Container>
