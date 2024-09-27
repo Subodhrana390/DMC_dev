@@ -51,16 +51,16 @@
 }
 
 .header .custom-navbar-toggle {
-  border: none !important; 
-  color: black !important; 
-  outline: none !important; 
-  box-shadow: none !important; 
+  border: none !important;
+  color: black !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 .custom-navbar-toggle:focus,
 .custom-navbar-toggle:hover {
   border: none !important;
   outline: none !important;
-  box-shadow: none !important; 
+  box-shadow: none !important;
 }
 
 @media (max-width: 768px) {
@@ -82,23 +82,22 @@
 .custom-navbar .nav-link::before {
   content: "";
   position: absolute;
-  bottom: 0; 
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 4px; 
-  background: rgb(35, 100, 153); 
+  height: 4px;
+  background: rgb(35, 100, 153);
   opacity: 0;
-  transform: scaleX(0); 
-  transform-origin: right; 
+  transform: scaleX(0);
+  transform-origin: right;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .custom-navbar .nav-link:hover::before {
   opacity: 1;
-  transform: scaleX(1); 
+  transform: scaleX(1);
   transform-origin: left;
 }
-
 
 /* Hero Section  */
 .hero_section {
@@ -926,9 +925,14 @@
   background-color: #fff;
 }
 
+@media (max-width: 480px) {
+  .Events {
+    padding: 10px 20px;
+  }
+}
 /* Event List Heading */
 .event_List h1 {
-  color: #fff; 
+  color: #fff;
   width: 100%;
   background-color: #007bff;
   font-size: 60px;
