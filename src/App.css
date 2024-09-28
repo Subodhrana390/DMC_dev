@@ -100,6 +100,7 @@
 }
 
 /* Hero Section  */
+/* Hero Section Base Styles */
 .hero_section {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("./assets/hero.webp");
@@ -148,10 +149,45 @@
   background-color: transparent;
 }
 
+/* Large Screen (1200px and above) */
+@media (min-width: 1200px) {
+  .hero_section {
+    padding: 0 200px; /* Increase padding for larger screens */
+    height: 100vh; /* Adjust height to full viewport height */
+  }
+
+  .Hero-title {
+    font-size: 40px; /* Bigger title for large screens */
+  }
+
+  .Hero-description {
+    font-size: 18px; /* Larger description text for large screens */
+  }
+
+  .text_button {
+    font-size: 18px; /* Increase button font size */
+  }
+}
+
+/* Responsive for Desktops (992px and above) */
+@media (max-width: 992px) {
+  .hero_section {
+    padding: 0 100px; /* Adjust padding for desktops */
+  }
+
+  .Hero-title {
+    font-size: 56px; /* Slightly smaller title for desktops */
+  }
+
+  .Hero-description {
+    font-size: 20px; /* Adjust description font size */
+  }
+}
+
 /* Responsive for Tablets (768px and below) */
 @media (max-width: 768px) {
-  .p-18 {
-    padding: 100px 50px !important; /* Reduce padding for tablets */
+  .hero_section {
+    padding: 100px 50px; /* Reduce padding for tablets */
   }
 
   .Hero-title {
@@ -160,40 +196,43 @@
   }
 
   .Hero-description {
+    font-size: 18px; /* Adjust description font size */
     width: 100%; /* Make description full-width for tablets */
-    font-size: 18px; /* Adjust font size */
+  }
+
+  .text_button {
+    font-size: 16px; /* Adjust button font size for tablets */
   }
 }
 
 /* Responsive for Mobile (576px and below) */
 @media (max-width: 576px) {
-  .p-18 {
-    padding: 80px 30px !important; /* Further reduce padding for mobile */
+  .hero_section {
+    padding: 80px 30px; /* Further reduce padding for mobile */
   }
 
   .Hero-title {
-    font-size: 36px; /* Adjust title size for phones */
-    line-height: normal; /* Ensure normal line spacing */
+    font-size: 36px; /* Adjust title size for mobile */
   }
 
   .Hero-description {
-    font-size: 16px; /* Reduce description font size for better readability on mobile */
+    font-size: 16px; /* Further adjust description font size */
   }
 
   .text_button {
-    padding: 8px 25px; /* Adjust button padding to fit mobile screens */
-    font-size: 16px; /* Slightly smaller font size for mobile */
+    padding: 8px 25px; /* Adjust button padding for mobile */
+    font-size: 14px; /* Adjust button font size for mobile */
   }
 }
 
 /* Extra Small Devices (320px and below) */
 @media (max-width: 320px) {
-  .p-18 {
-    padding: 60px 20px !important; /* Adjust padding for extra small devices */
+  .hero_section {
+    padding: 60px 20px; /* Adjust padding for extra small devices */
   }
 
   .Hero-title {
-    font-size: 30px; /* Further adjust title size */
+    font-size: 30px; /* Adjust title size for extra small screens */
   }
 
   .Hero-description {
@@ -202,7 +241,7 @@
 
   .text_button {
     padding: 6px 20px; /* Smaller padding for the button */
-    font-size: 14px; /* Adjust font size for the button */
+    font-size: 12px; /* Further adjust button font size */
   }
 }
 
@@ -1455,5 +1494,209 @@
 @media (max-width: 480px) {
   .faculty {
     padding: 30px;
+  }
+}
+
+/* Slider  */
+.carousel-caption-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.carousel-item:hover .carousel-caption-overlay {
+  opacity: 1;
+}
+
+.carousel-caption-overlay h1 {
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.carousel-caption-overlay p {
+  font-size: 18px;
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  max-width: 600px;
+}
+
+.carousel-caption-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+}
+
+ /* Latest Updates  */
+ /* Latest Updates Base Styles */
+.latest-updates-container {
+  background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+  padding: 50px 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: white;
+}
+
+.updates-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Grid for the updates */
+.updates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 30px;
+  width: 100%;
+}
+
+/* Individual update boxes */
+.update-box {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Soft box shadow */
+  color: #333;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Hover effect for update boxes */
+.update-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Update box title */
+.update-box h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Update description */
+.update-box p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+/* Read more link */
+.update-link {
+  text-decoration: none;
+  font-weight: 700;
+  color: #2575fc;
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  align-self: flex-start;
+}
+
+/* Hover effect for the link */
+.update-link:hover {
+  background-color: #2575fc;
+  color: white;
+}
+
+/* Responsive for Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .latest-updates-container {
+    padding: 50px 30px;
+  }
+
+  .updates-title {
+    font-size: 2.5rem;
+  }
+
+  .update-box {
+    padding: 15px;
+  }
+
+  .update-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .update-box p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive for Mobile (max-width: 576px) */
+@media (max-width: 576px) {
+  .latest-updates-container {
+    padding: 30px 20px;
+  }
+
+  .updates-title {
+    font-size: 2rem;
+  }
+
+  .update-box {
+    padding: 10px;
+  }
+
+  .update-box h2 {
+    font-size: 1.25rem;
+  }
+
+  .update-box p {
+    font-size: 0.85rem;
+  }
+
+  .update-link {
+    padding: 8px 15px;
+  }
+}
+
+/* Large Screens (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .updates-title {
+    font-size: 3.5rem;
+  }
+
+  .updates-grid {
+    gap: 40px;
+  }
+
+  .update-box {
+    padding: 25px;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .update-box h2 {
+    font-size: 2rem;
+  }
+
+  .update-box p {
+    font-size: 1.1rem;
+  }
+
+  .update-link {
+    padding: 12px 25px;
+    font-size: 1.1rem;
   }
 }
