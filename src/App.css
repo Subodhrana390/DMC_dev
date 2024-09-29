@@ -275,16 +275,16 @@
     #1dd1a1,
     #48dbfb,
     #9b59b6
-  ); /* Vibrant color gradient */
-  -webkit-background-clip: text; /* Shows gradient in text */
-  -webkit-text-fill-color: transparent; /* Makes the gradient visible in text */
+  );
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
   transition: all 0.3s ease;
 }
 
 .heading_section .about_title:hover {
   transform: scale(1.1);
-  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Enhanced shadow with hover */
-  filter: brightness(1.2); /* Makes colors more vibrant on hover */
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  filter: brightness(1.2); 
 }
 
 .left,
@@ -1540,163 +1540,107 @@
 }
 
  /* Latest Updates  */
- /* Latest Updates Base Styles */
-.latest-updates-container {
-  background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
-  padding: 50px 150px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  color: white;
+/* Creative styling for the Notice Board */
+#block-latestnews {
+  background: linear-gradient(135deg, #f0f4ff 0%, #dfe7fd 100%);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 20px auto;
 }
 
-.updates-title {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 40px;
-  text-transform: uppercase;
+.mainHeading h1 {
+  font-size: 2.5rem;
+  color: #333;
   text-align: center;
-}
-
-/* Grid for the updates */
-.updates-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-  gap: 30px;
-  width: 100%;
-}
-
-/* Individual update boxes */
-.update-box {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 20px;
-  transition: all 0.3s ease;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Soft box shadow */
-  color: #333;
-  min-height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-}
-
-/* Hover effect for update boxes */
-.update-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-}
-
-/* Update box title */
-.update-box h2 {
-  font-size: 1.75rem;
-  font-weight: 600;
-  color: #333;
-}
-
-/* Update description */
-.update-box p {
-  font-size: 1rem;
-  color: #666;
   margin-bottom: 20px;
-  flex-grow: 1;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
 }
 
-/* Read more link */
-.update-link {
+.News img {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 15px;
+}
+
+.news-list {
+  list-style-type: none;
+  overflow-y: auto;
+  padding-left: 0;
+  max-height: 300px;
+  padding: 0 10px;
+  scrollbar-width: 2px; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+
+
+/* Add border-radius to the scroll container */
+#allLatestNews {
+  border-radius: 4px;
+}
+
+.news-list li {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 15px;
+  position: relative;
+  padding: 10px;
+  background: white;
+  border-radius: 4px; /* Border radius for list items */
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.news-list li:hover {
+  background: #f5f9ff;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.news-list li a {
+  color: #007bff;
   text-decoration: none;
-  font-weight: 700;
-  color: #2575fc;
-  background-color: transparent;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  align-self: flex-start;
+  font-weight: 600;
+  margin-left: 10px;
 }
 
-/* Hover effect for the link */
-.update-link:hover {
-  background-color: #2575fc;
-  color: white;
+.news-list li a:hover {
+  text-decoration: underline;
 }
 
-/* Responsive for Tablets (max-width: 768px) */
-@media (max-width: 768px) {
-  .latest-updates-container {
-    padding: 50px 30px;
-  }
+/* New badge with SVG */
+.new-badge {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  animation: badgeBounce 1.2s infinite alternate;
+}
 
-  .updates-title {
-    font-size: 2.5rem;
+@keyframes badgeBounce {
+  0% {
+    transform: scale(1);
   }
-
-  .update-box {
-    padding: 15px;
-  }
-
-  .update-box h2 {
-    font-size: 1.5rem;
-  }
-
-  .update-box p {
-    font-size: 0.9rem;
+  100% {
+    transform: scale(1.2);
   }
 }
 
-/* Responsive for Mobile (max-width: 576px) */
-@media (max-width: 576px) {
-  .latest-updates-container {
-    padding: 30px 20px;
+/* Responsive design for mobile */
+@media screen and (max-width: 600px) {
+  .mainHeading h1 {
+    font-size: 1.8rem;
   }
 
-  .updates-title {
-    font-size: 2rem;
+  .news-list {
+    max-height: 200px;
   }
 
-  .update-box {
-    padding: 10px;
-  }
-
-  .update-box h2 {
-    font-size: 1.25rem;
-  }
-
-  .update-box p {
-    font-size: 0.85rem;
-  }
-
-  .update-link {
-    padding: 8px 15px;
-  }
-}
-
-/* Large Screens (min-width: 1200px) */
-@media (min-width: 1200px) {
-  .updates-title {
-    font-size: 3.5rem;
-  }
-
-  .updates-grid {
-    gap: 40px;
-  }
-
-  .update-box {
-    padding: 25px;
-    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.15);
-  }
-
-  .update-box h2 {
-    font-size: 2rem;
-  }
-
-  .update-box p {
-    font-size: 1.1rem;
-  }
-
-  .update-link {
-    padding: 12px 25px;
-    font-size: 1.1rem;
+  .news-list li {
+    font-size: 1rem;
   }
 }
