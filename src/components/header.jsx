@@ -25,8 +25,11 @@ const Header = () => {
                   src={Logo}
                   alt="Logo"
                   width={150}
-                  height={80}
-                  style={{ objectFit: "contain" }}
+                  height={60}
+                  style={{
+                    objectFit: "contain",
+                    scale: "1.25"
+                  }}
                   loading="lazy"
                 />
               </Navbar.Brand>
@@ -63,6 +66,15 @@ const Header = () => {
                     className="text-dark fw-bold px-4 nav-link"
                   >
                     Events
+                  </Nav.Link>
+                  <Nav.Link
+                    onClick={() => {
+                      navigate("/teams");
+                      closeNavbar();
+                    }}
+                    className="text-dark fw-bold px-4 nav-link"
+                  >
+                    Teams
                   </Nav.Link>
                   <Nav.Link
                     onClick={() => {

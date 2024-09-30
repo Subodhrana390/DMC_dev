@@ -1,7 +1,7 @@
 import React from 'react';
 import Slide1 from '../assets/Events/IMG_4046.jpg';
 import Slide2 from '../assets/Events/IMG_4062.jpg';
-import Slide3 from '../assets/Events/Scanned_20240925-1846-13.jpg';
+import Slide3 from '../assets/Events/Scanned_20240925-1846-26.jpg';
 
 
 const Slider = () => {

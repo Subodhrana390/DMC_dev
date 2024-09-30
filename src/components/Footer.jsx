@@ -16,12 +16,12 @@ const Footer = () => {
 
           <h1 className="footer_title">
             Digital Marketing Club
-            <br /> Guru Nanak Dev Engineering College, Ludhiana
+            <br /> Guru Nanak Dev Engineering College<br /> Ludhiana
           </h1>
           <div className="followUs_Section">
             <h5>Follow Us</h5>
             <div className="follows_icon">
-              <a href="mail:gndecdigitalmarketing@gmail.com">
+              <a href="mailto:gndecdigitalmarketing@gmail.com">
                 <IoMdMail />
               </a>
               <a href=" https://www.facebook.com/official.gndec">
@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="copyright_section">Copyright 2024 @ DMC GNDEC</div>
+      <div className="copyright_section">2024 © Digital Marketing Club</div>
     </div>
   );
 };

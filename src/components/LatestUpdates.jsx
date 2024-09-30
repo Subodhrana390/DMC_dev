@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { FaStar } from "react-icons/fa";
+import { MdFiberNew } from "react-icons/md";
 
 const LatestUpdates = () => {
 
@@ -11,10 +11,12 @@ const LatestUpdates = () => {
         },
         {
             title: "Causmic Club organized a one day trip to Kasuali.",
+            isNew: true,
             link: "https://causmic.gndec.ac.in/node/22",
         },
         {
             title: "Causmic Club organized a workshop on Git and Linux.",
+            isNew: true,
         },
         {
             title: "Genconian Grand Prix organized by Causmic Club.",
@@ -41,10 +43,9 @@ const LatestUpdates = () => {
                                     <li key={index} >
                                         {update.isNew && (
                                             <span className="new-badge">
-                                                <FaStar color="#FFD700" size={20} />
+                                                <MdFiberNew color="#FFD700" size={20} />
                                             </span>
-                                        )}
-                                        {update.title}
+                                        )}{update.title}
                                         {update.link && (
                                             <a href={update.link} target="_blank" rel="noopener noreferrer">
                                                 Learn more
