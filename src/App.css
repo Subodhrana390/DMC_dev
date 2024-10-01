@@ -10,6 +10,7 @@ body {
 .header {
   background-color: #fff;
   position: relative;
+  box-shadow: 5px 5px 15px rgba(228, 219, 219, 0.897);
 }
 
 .header .custom-navbar-toggle {
@@ -63,151 +64,6 @@ body {
   transform-origin: left;
 }
 
-/* Hero Section  */
-.hero_section {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("./assets/hero.webp");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  padding: 0 150px;
-  height: 90vh;
-}
-
-.Hero-title {
-  font-size: 60px;
-  line-height: 1.2;
-  color: #fff;
-  font-weight: 800;
-  padding: 20px 0;
-}
-
-.Hero-description {
-  user-select: none;
-  padding-block: 10px;
-  max-width: 700px;
-  width: 100%;
-  text-align: justify;
-  font-weight: 500;
-  color: white;
-}
-
-.text_button {
-  text-decoration: none;
-  font-weight: 700;
-  color: #524781;
-  padding: 10px 35px;
-  border: none;
-  border-radius: 10px;
-  background-color: white;
-  transition: all 0.3s ease;
-}
-
-.text_button:hover {
-  border: 1px solid white;
-  color: #fff;
-  background-color: transparent;
-}
-
-/* Large Screen (1200px and above) */
-@media (min-width: 1200px) {
-  .hero_section {
-    padding: 0 200px; /* Increase padding for larger screens */
-    height: 100vh; /* Adjust height to full viewport height */
-  }
-
-  .Hero-title {
-    font-size: 40px; /* Bigger title for large screens */
-  }
-
-  .Hero-description {
-    font-size: 18px; /* Larger description text for large screens */
-  }
-
-  .text_button {
-    font-size: 18px; /* Increase button font size */
-  }
-}
-
-/* Responsive for Desktops (992px and above) */
-@media (max-width: 992px) {
-  .hero_section {
-    padding: 0 100px; /* Adjust padding for desktops */
-  }
-
-  .Hero-title {
-    font-size: 56px; /* Slightly smaller title for desktops */
-  }
-
-  .Hero-description {
-    font-size: 20px; /* Adjust description font size */
-  }
-}
-
-/* Responsive for Tablets (768px and below) */
-@media (max-width: 768px) {
-  .hero_section {
-    padding: 100px 50px; /* Reduce padding for tablets */
-  }
-
-  .Hero-title {
-    font-size: 48px; /* Reduce title size for tablets */
-    line-height: normal; /* Adjust line-height */
-  }
-
-  .Hero-description {
-    font-size: 18px; /* Adjust description font size */
-    width: 100%; /* Make description full-width for tablets */
-  }
-
-  .text_button {
-    font-size: 16px; /* Adjust button font size for tablets */
-  }
-}
-
-/* Responsive for Mobile (576px and below) */
-@media (max-width: 576px) {
-  .hero_section {
-    padding: 80px 30px; /* Further reduce padding for mobile */
-  }
-
-  .Hero-title {
-    font-size: 36px; /* Adjust title size for mobile */
-  }
-
-  .Hero-description {
-    font-size: 16px; /* Further adjust description font size */
-  }
-
-  .text_button {
-    padding: 8px 25px; /* Adjust button padding for mobile */
-    font-size: 14px; /* Adjust button font size for mobile */
-  }
-}
-
-/* Extra Small Devices (320px and below) */
-@media (max-width: 320px) {
-  .hero_section {
-    padding: 60px 20px; /* Adjust padding for extra small devices */
-  }
-
-  .Hero-title {
-    font-size: 30px; /* Adjust title size for extra small screens */
-  }
-
-  .Hero-description {
-    font-size: 14px; /* Further reduce description font size */
-  }
-
-  .text_button {
-    padding: 6px 20px; /* Smaller padding for the button */
-    font-size: 12px; /* Further adjust button font size */
-  }
-}
-
 /* About  */
 .about-container {
   background-color: #f8f9fa;
@@ -215,39 +71,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 50px 150px;
-}
-
-.heading_section .about_title {
-  color: #fff; /* Set a white fallback color */
-  font-size: 48px;
-  text-align: center;
-  user-select: none;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  word-spacing: 5px;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3),
-    -2px -2px 8px rgba(255, 255, 255, 0.5); /* Vibrant dual shadow effect */
-  line-height: 1.5;
-  margin-block: 50px;
-  font-family: "Poppins", sans-serif; /* Modern, clean font */
-  background: linear-gradient(
-    90deg,
-    #ff6b6b,
-    #fddb92,
-    #1dd1a1,
-    #48dbfb,
-    #9b59b6
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease;
-}
-
-.heading_section .about_title:hover {
-  transform: scale(1.1);
-  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
-  filter: brightness(1.2);
 }
 
 .left,
@@ -263,13 +86,17 @@ body {
 .left .about_title {
   font-weight: 700;
   font-size: 36px;
+  line-height: 1.5;
 }
 
 .left .about_description {
-  user-select: none;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.5;
   text-align: justify;
-  margin-bottom: 30px;
+  padding-block: 20px;
+  user-select: none;
+
 }
 
 .left .text_button {
@@ -305,8 +132,8 @@ body {
 
 /* Tablets: max-width 768px */
 
-@media (max-width:1024px){
-  .about-container{
+@media (max-width: 1024px) {
+  .about-container {
     padding: 20px 50px;
   }
 }
@@ -457,18 +284,36 @@ body {
   scale: 1.25;
   object-fit: contain;
 }
-
 .footer_1 .footer_title {
-  font-size: 16px;
-  color: #000;
-  font-weight: 600;
   margin-block: 20px;
+}
+.footer_1 .footer_title span {
+  display: block;
+  color: #141414;
+  line-height: 115%;
+}
+
+.footer_1 .footer_title span:nth-child(1) {
+  font-size: 24px;
+  color: #1f14b9;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.footer_1 .footer_title span:nth-child(2) {
+  font-size: 16px;
+  color: #0c345f;
+  font-weight: 700;
+}
+.footer_1 .footer_title span:nth-child(3) {
+  font-size: 14px;
+  color: #0c345f;
+  font-weight: 700;
 }
 
 .followUs_Section h5 {
   font-size: 16px;
   font-weight: 700;
-  color: #141414;
+  color: #707070;
   margin-bottom: 10px;
 }
 
@@ -547,7 +392,6 @@ body {
     align-items: center;
   }
 
-
   .footer_1 .footer_title {
     font-size: 16px;
   }
@@ -586,10 +430,9 @@ body {
 }
 
 @media (max-width: 576px) {
-  
   .footer_Section {
     grid-template-columns: 1fr;
-    
+
     padding: 20px 30px;
   }
 
@@ -780,37 +623,53 @@ body {
 .event_List h1 {
   color: #fff;
   width: 100%;
-  background-color: #007bff;
   font-size: 60px;
   text-align: center;
   user-select: none;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 3px;
+  transform: scale(0.8);
   word-spacing: 5px;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3),
-    -2px -2px 8px rgba(255, 255, 255, 0.5); /* Vibrant dual shadow effect */
+  text-shadow: 3px 3px 10px rgba(153, 116, 116, 0.3),
+    -2px -2px 8px rgba(46, 34, 34, 0.5);
   line-height: 1.5;
-  margin-block: 50px;
-  font-family: "Poppins", sans-serif; /* Modern, clean font */
+  margin-block: 10px;
+  font-family: "Poppins", sans-serif;
   transition: all 0.3s ease;
 }
 
 .event_List h1:hover {
-  transform: scale(1.1);
+  color: #00000098;
+  transform: scale(1);
   text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Enhanced shadow with hover */
   filter: brightness(1.2); /* Makes colors more vibrant on hover */
 }
 
-/* Event Card Styles */
+.Events .subDescription {
+  display: block;
+  height: 200px;
+  padding: 35px 20px;
+  border: 1px solid #f5f9ff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+.subDescription p {
+  font-size: 16px;
+  text-align: justify;
+  font-weight: 500;
+  line-height: 150%;
+}
 
 .event_List {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  padding: 50px;
 }
 .event_List .Event_Card {
+  position: relative;
   width: 100%;
   max-width: 300px;
   height: max-content;
@@ -845,7 +704,13 @@ body {
 
 /* Event Card Content */
 .Event_Card_content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.5));
   padding: 1rem;
+  bottom: -100%;
+  transition: all 300ms ease;
 }
 
 /* Title */
@@ -853,21 +718,7 @@ body {
   font-size: 1.25rem; /* 20px */
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: #333;
-}
-
-/* Event Date */
-.Event_Card_content .event_Date {
-  color: orange;
-  font-size: 0.875rem; /* 14px */
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.5rem;
-}
-
-.Event_Card_content .event_Date svg {
-  margin-right: 0.5rem;
+  color: #fff;
 }
 
 /* Description */
@@ -876,24 +727,11 @@ body {
   font-size: 0.875rem; /* 14px */
   font-weight: 500;
   margin-bottom: 1rem;
-  color: #666;
+  color: #e7e7e7;
 }
 
-/* Button */
-.Event_Card_content button {
-  border: none;
-  background-color: var(--navColor);
-  border-radius: 5px;
-  color: white;
-  padding: 0.5rem 1rem;
-  font-weight: 700;
-  font-size: 0.875rem; /* 14px */
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.Event_Card_content button:hover {
-  background-color: #524781;
+.Event_Card:hover .Event_Card_content {
+  bottom: 0;
 }
 
 /* Responsive Styles */
@@ -928,20 +766,29 @@ body {
 
 /* Mobile */
 @media (max-width: 576px) {
-  .Events .event_List {
-    padding: 20px 30px; /* Further reduce padding */
-    display: block; /* Stack the cards vertically */
+  .Events .subDescription {
+    margin: 20px 10px ;
+    display: block;
+    height: max-content;
+    padding: 35px 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  .subDescription p {
+    font-size: 16px;
+    text-align: justify;
+    font-weight: 500;
+    line-height: 150%;
   }
 
   .event_List .Event_Card {
-    max-width: 100%; /* Full width */
-    margin-bottom: 20px; /* Space between stacked cards */
+    max-width: 100%;
+    margin-bottom: 20px;
   }
 
   .event_List h1 {
     font-size: 24px; /* Smaller heading */
   }
-
   .Event_Card_content .event_title {
     font-size: 1rem; /* 16px */
   }
@@ -950,10 +797,7 @@ body {
     font-size: 0.75rem; /* 12px */
   }
 
-  .Event_Card_content button {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.75rem; /* 12px */
-  }
+
 }
 
 /* Contact  */
@@ -1265,7 +1109,10 @@ body {
 
 @media (max-width: 480px) {
   .members {
-    padding: 30px;
+    padding: 10px;
+  }
+  .members h1{
+    font-size: 20px;
   }
 }
 
@@ -1299,7 +1146,11 @@ body {
 
 @media (max-width: 480px) {
   .faculty {
-    padding: 30px;
+    padding: 10px;
+  }
+
+  .faculty h1{
+    font-size: 20px;
   }
 }
 
@@ -1361,7 +1212,7 @@ body {
   text-align: center;
   margin-bottom: 20px;
   position: relative;
-  font-weight:bold;
+  font-weight: bold;
   letter-spacing: 1px;
 }
 
@@ -1388,7 +1239,7 @@ body {
 
 .news-list li {
   width: auto;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: #333;
   margin-bottom: 15px;
@@ -1436,8 +1287,7 @@ body {
 
 /* Responsive design for mobile */
 @media screen and (max-width: 600px) {
-
-  #block-latestnews{
+  #block-latestnews {
     margin: 0;
   }
   .mainHeading h1 {
@@ -1451,7 +1301,7 @@ body {
 
   .news-list li {
     padding: 4px;
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -1464,19 +1314,29 @@ body {
 }
 
 #highlights .heading {
+  position: relative;
+  color: #fff;
+  width: 100%;
+  font-size: 60px;
   text-align: center;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 100%;
+  user-select: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transform: scale(0.8);
+  word-spacing: 5px;
+  text-shadow: 3px 3px 10px rgba(153, 116, 116, 0.3),
+    -2px -2px 8px rgba(46, 34, 34, 0.5);
+  line-height: 1.5;
+  margin-block: 10px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
 }
-
-#highlights .heading span {
-  font-size: 30px;
-  margin-right: 10px;
-  color: #305cde;
-  text-decoration: underline;
-  font-weight: 700;
-  line-height: 100%;
+#highlights .heading:hover{
+  color: #00000098;
+  transform: scale(1);
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  filter: brightness(1.2);
 }
 
 #highlights .row .col-sm-4 h4 {
@@ -1491,11 +1351,11 @@ body {
   font-weight: 600;
   padding: 5px 20px;
   border-radius: 5px;
-  background-color: #a1c4fd;
+  background-color: #0b3e8f;
   transition: all 300ms ease;
 }
 #highlights button:hover {
-  background-color: #0f2053;
+  background-color: #4360b8;
   color: #fff;
 }
 
@@ -1514,3 +1374,6 @@ body {
     padding: 10px 10px;
   }
 }
+
+
+/* Our Team  */

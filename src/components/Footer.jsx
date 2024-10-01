@@ -14,10 +14,11 @@ const Footer = () => {
             <img src={GNDEC_Logo} alt="GNDEC_Logo" loading="lazy" />
           </div>
 
-          <h1 className="footer_title">
-            Digital Marketing Club
-            <br /> Guru Nanak Dev Engineering College<br /> Ludhiana
-          </h1>
+          <div className="footer_title">
+            <span>Digital Marketing Club</span>
+            <span>Guru Nanak Dev Engineering College</span>
+            <span>Ludhiana</span>
+          </div>
           <div className="followUs_Section">
             <h5>Follow Us</h5>
             <div className="follows_icon">
