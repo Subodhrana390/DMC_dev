@@ -56,7 +56,7 @@ const Header = () => {
                     }}
                     className="text-dark fw-bold px-4 nav-link"
                   >
-                    About
+                    About Us
                   </Nav.Link>
                   <Nav.Link
                     onClick={() => {
