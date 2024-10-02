@@ -47,7 +47,7 @@ const About = () => {
 
       <div className="row our_features">
         <div className="col-sm-12 col-md-6">
-          <div className="feature_card">
+          <div className="feature_card" data-aos="fade-left">
             <h3>Our Vision</h3>
             <p>
               To create a thriving community of innovative digital marketers,
@@ -58,7 +58,7 @@ const About = () => {
           </div>
         </div>
         <div className="col-sm-12 col-md-6">
-          <div className="feature_card">
+          <div className="feature_card" data-aos="fade-right">
             <h3>Our Mission</h3>
             <p>
               To empower students with the latest digital marketing skills and
@@ -69,7 +69,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="row g-0">
+      <div className="row g-0" data-aos="fade-left">
         <div className="col-sm-12 col-md-6 col-lg-3">
           <div className="count_card">
             <h5>Faculty Member</h5>

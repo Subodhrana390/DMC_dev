@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Logo from "../assets/Logo.png";
+import Aos from "aos";
 
 const About = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
   return (
     <div className="about-container">
-      <div className="left">
+      <div className="left" data-aos="fade-left">
         <h1 className="about_title">About DMC</h1>
         <p className="about_description">
           The Digital Marketing Club empowers members with hands-on experience
@@ -19,7 +26,7 @@ const About = () => {
           Learn More
         </a>
       </div>
-      <div className="right">
+      <div className="right" data-aos="right">
         <img src={Logo} alt="DMC Logo" loading="lazy" />
       </div>
     </div>

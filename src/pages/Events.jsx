@@ -18,7 +18,7 @@ const Events = () => {
         <h1>Past Events</h1>
       </div>
 
-      <div className="subDescription">
+      <div className="subDescription" data-aos="fade-right">
         <p>
           The Digital Marketing Club has hosted a range of impactful sessions
           designed to enhance members' marketing skills. Participants gained
