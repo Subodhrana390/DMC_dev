@@ -1,6 +1,7 @@
 import React from "react";
 import CanvaSep from "../assets/Events/canva_september.jpg";
-import RecuritAugust from "../assets/Events/recurit_august.jpg";
+import RecuritAugust from "../assets/Events/recurit_August.jpg";
+import RecuritApril from "../assets/Events/recurit_April.jpg";
 const Highlights = () => {
   return (
     <section id="highlights">
@@ -54,7 +55,32 @@ const Highlights = () => {
                 cursor: "pointer",
               }}
             >
-              New Recruitment 2024
+              New Recruitment 2024 (August)
+            </h4>
+          </div>
+          <div className="col-sm-12 col-md-6  col-lg-4">
+            <img
+              src={RecuritApril}
+              alt=""
+              height={200}
+              style={{
+                objectFit: "cover",
+                borderRadius: "10px",
+                width: "100%",
+                boxShadow: "0 2px 0px 10px #bfd0d400",
+              }}
+            />
+            <h4
+              style={{
+                fontSize: "20px",
+                marginTop: "5px",
+                textAlign: "center",
+                userSelect: "none",
+                fontWeight: "900",
+                cursor: "pointer",
+              }}
+            >
+              New Recruitment 2024 (April)
             </h4>
           </div>
         </div>
