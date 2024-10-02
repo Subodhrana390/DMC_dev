@@ -1,4 +1,3 @@
-huimport React from "react";
 import Logo from "../assets/Logo.png";
 import GNDEC_Logo from "../assets/GNDEC_Logo.png";
 import { FaFacebook, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
