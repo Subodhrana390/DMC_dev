@@ -1,5 +1,5 @@
 import React from "react";
-import BlogWritting from "../assets/Events/blog_writting.jpg";
+import BlogWritting from "../assets/Events/Blog_writting.jpg";
 import CanvaMArch from "../assets/Events/canva_march.jpg";
 import Reel from "../assets/Events/Reel_video.jpg";
 import { useEffect } from "react";
