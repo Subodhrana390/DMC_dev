@@ -22,7 +22,7 @@ const Slider = () => {
         <button
           type="button"
           data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="2"
+          data-bs-slide-to="1"
           aria-label="Slide 2"
         ></button>
       </div>
