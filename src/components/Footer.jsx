@@ -1,4 +1,4 @@
-import React from "react";
+huimport React from "react";
 import Logo from "../assets/Logo.png";
 import GNDEC_Logo from "../assets/GNDEC_Logo.png";
 import { FaFacebook, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
@@ -47,7 +47,7 @@ const Footer = () => {
               <a href="/">Home</a>
               <a href="/about">About Us</a>
               <a href="/events">Events</a>
-              <a href="/members">Teams</a>
+              <a href="/teams">Teams</a>
               <a href="/contact">Contact</a>
             </div>
           </div>
