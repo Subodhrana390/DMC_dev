@@ -16,7 +16,7 @@ const Events = () => {
     });
   }, []);
   return (
-    <div className="Events">
+    <div className="Events" id="events">
       <div className="event_List">
         <h1>Past Events</h1>
       </div>

@@ -42,12 +42,24 @@ const Footer = () => {
         </div>
         <div className="footer_2">
           <div className="Links">
-            <a href="/">Home</a>
-            <a href="/faculty">Faculty</a>
-            <a href="/events">Events</a>
-            <a href="/members">Members</a>
-            <a href="/contact">Contact</a>
-            <a href="/developer">Web Developer</a>
+            <a id="home" href="/">
+              Home
+            </a>
+            <a id="faculty" href="/faculty">
+              Faculty
+            </a>
+            <a id="events" href="/events">
+              Events
+            </a>
+            <a id="members" href="/members">
+              Members
+            </a>
+            <a id="contacts" href="/contact">
+              Contact
+            </a>
+            <a id="developer" href="/developer">
+              Web Developer
+            </a>
           </div>
         </div>
       </div>

@@ -32,33 +32,36 @@ const LatestUpdates = () => {
     ];
 
     return (
-        <div id="block-latestnews" className="block">
-            <div className="block-content">
-                <div className="mainHeading block-content" id="latestNews">
-                    <h1>Notice Board</h1>
-                    <div className="News">
-                        <div id="allLatestNews">
-                            <ul className="news-list">
-                                {updates.map((update, index) => (
-                                    <li key={index} >
-                                        {update.isNew && (
-                                            <span className="new-badge">
-                                                <MdFiberNew color="#FFD700" size={20} />
-                                            </span>
-                                        )}{update.title}
-                                        {update.link && (
-                                            <a href={update.link} target="_blank" rel="noopener noreferrer">
-                                                Learn more
-                        </a>
-                                        )}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+      <div id="block-latestnews" className="block">
+        <div className="block-content">
+          <div className="mainHeading block-content" id="latestNews">
+            <h1>Notice Board</h1>
+            <div className="News">
+              <ul className="news-list">
+                {updates.map((update, index) => (
+                  <li key={index}>
+                    {update.isNew && (
+                      <span>
+                        <MdFiberNew color="#FFD700" size={30} />
+                      </span>
+                    )}
+                    {update.title}
+                    {update.link && (
+                      <a
+                        href={update.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Learn more
+                      </a>
+                    )}
+                  </li>
+                ))}
+              </ul>
             </div>
+          </div>
         </div>
+      </div>
     );
 };
 

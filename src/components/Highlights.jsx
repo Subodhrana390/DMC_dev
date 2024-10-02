@@ -89,7 +89,9 @@ const Highlights = () => {
           </div>
         </div>
       </div>
-      <button onClick={() => navigate("/events")}>Past Events</button>
+      <button id="events" onClick={() => navigate("/events")}>
+        Past Events
+      </button>
     </section>
   );
 };
