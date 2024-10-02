@@ -41,25 +41,23 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer_2">
-          <div className="Links">
-            <a id="home" href="/">
-              Home
-            </a>
-            <a id="faculty" href="/faculty">
-              Faculty
-            </a>
-            <a id="events" href="/events">
-              Events
-            </a>
-            <a id="members" href="/members">
-              Members
-            </a>
-            <a id="contacts" href="/contact">
-              Contact
-            </a>
-            <a id="developer" href="/developer">
-              Web Developer
-            </a>
+          <div className="col-sm-12 col-md-6">
+            <div className="Links">
+              <h4>Main Links</h4>
+              <a href="/">Home</a>
+              <a href="/faculty">About Us</a>
+              <a href="/events">Events</a>
+              <a href="/members">Teams</a>
+              <a href="/contact">Contact</a>
+            </div>
+          </div>
+          <div className="col-sm-12 col-md-6">
+            <div className="Links">
+              <h4>Links</h4>
+              <a href="/faculty">Faculty</a>
+              <a href="/members">Members</a>
+              <a href="/developer">Web Developer</a>
+            </div>
           </div>
         </div>
       </div>

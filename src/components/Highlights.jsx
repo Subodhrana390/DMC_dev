@@ -1,12 +1,9 @@
 import React from "react";
 import img1 from '../assets/Events/IMG_4042.jpg'
 import img2 from '../assets/Events/Scanned_20240925-1846-26.jpg'
-import img3 from '../assets/Events/IMG_20240812_124541.jpg'
-import underLine from "../assets/underline.png";
-import { useNavigate } from "react-router-dom";
+import img3 from "../assets/Events/IMG_20240812_124541.jpg";
 
 const Highlights = () => {
-  const navigate = useNavigate();
   return (
     <section id="highlights">
       <h4 className="heading">Highlights</h4>
@@ -89,7 +86,7 @@ const Highlights = () => {
           </div>
         </div>
       </div>
-      <button id="events" onClick={() => navigate("/events")}>
+      <button onClick={() => (window.location.href = "/events")}>
         Past Events
       </button>
     </section>

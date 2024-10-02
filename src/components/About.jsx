@@ -11,6 +11,7 @@ const About = () => {
           through real-world projects, enhancing their skills in SEO, social
           media, and content creation.
           <br />
+          <br />
           It offers valuable networking opportunities with peers and industry
           professionals, fostering connections for future career growth.
         </p>

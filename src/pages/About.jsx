@@ -16,21 +16,27 @@ const About = () => {
         <div className="left" data-aos="fade-right">
           <h1 className="about_title">About DMC</h1>
           <p className="about_description">
-            A Digital Marketing Club is a dynamic community where individuals
-            passionate about digital marketing come together to learn,
-            collaborate, and grow. It provides members with opportunities to
-            stay updated on the latest trends and strategies in areas like SEO,
-            social media marketing, content creation, and more through
-            expert-led workshops and webinars. The club encourages collaboration
-            on real-world projects, allowing participants to gain practical
-            experience while enhancing their marketing skills. Members also
-            benefit from networking opportunities with like-minded peers and
-            industry professionals, creating valuable connections for future
-            career growth. Overall, the club fosters creativity, hands-on
-            learning, and professional development in the fast-paced digital
-            marketing landscape.
+            The Digital Marketing Club at Guru Nanak Dev Engineering College
+            (GNDEC) is a vibrant platform for students interested in the rapidly
+            evolving field of digital marketing. This club offers a unique
+            opportunity for members to engage in interactive learning
+            experiences and stay abreast of the latest trends in the digital
+            marketing space, including SEO, social media strategies, content
+            marketing, and data analytics. <br />
+            <br />
+            The Digital Marketing Club at GNDEC emphasizes the importance of
+            collaboration, enabling students to work together on innovative
+            projects while also networking with professionals and alumni in the
+            industry. This active participation not only improves students'
+            technical marketing skills but also creates meaningful connections,
+            offering avenues for internships and career opportunities in the
+            digital marketing industry. The club serves as a resourceful
+            environment that nurtures creativity, professional growth, and
+            learning, ensuring that students are well-prepared to thrive in the
+            fast-paced digital marketing landscape. For more details, visit the
+            GNDEC official website.
           </p>
-          <a href="#" className="text_button">
+          <a href="https://www.gndec.ac.in" className="text_button">
             Learn More
           </a>
         </div>

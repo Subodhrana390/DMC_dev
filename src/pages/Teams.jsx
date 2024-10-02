@@ -6,8 +6,13 @@ const Teams = () => {
       <h4>Teams</h4>
       <div className="container">
         <div className="row">
-          <div className="col-sm-12 col-md-6">Core Team</div>
-          <div className="col-sm-12 col-md-6">Sub Core Team</div>
+          <div className="col-sm-12 col-md-6">
+            <a href="/members">Core Team</a>
+          </div>
+          <div className="col-sm-12 col-md-6">
+            {" "}
+            <a href="/members">Sub Core Team</a>
+          </div>
         </div>
       </div>
     </div>

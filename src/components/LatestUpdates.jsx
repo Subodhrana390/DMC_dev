@@ -34,7 +34,7 @@ const LatestUpdates = () => {
     return (
       <div id="block-latestnews" className="block">
         <div className="block-content">
-          <div className="mainHeading block-content" id="latestNews">
+          <div className="mainHeading" id="latestNews">
             <h1>Notice Board</h1>
             <div className="News">
               <ul className="news-list">
