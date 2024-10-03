@@ -41,9 +41,9 @@ const LatestUpdates = () => {
   return (
     <div id="block-latestnews" className="block" data-aos="fade-left">
       <div className="block-content">
-        <div className="mainHeading" id="latestNews">
-          <h1>Notice Board</h1>
+        <div id="latestNews">
           <div className="News">
+          <h1>Notice Board</h1>
             <ul className="news-list">
               {updates.map((update, index) => (
                 <li key={index}>

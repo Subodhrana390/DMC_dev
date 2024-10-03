@@ -70,6 +70,7 @@ body {
 
 /* About  */
 .about-container {
+  width: 100%;
   background-color: #f8f9fa;
   display: flex;
   justify-content: space-between;
@@ -181,9 +182,6 @@ body {
 
 /* Small Tablets and Large Phones: max-width 576px */
 @media (max-width: 576px) {
-  .about-container {
-    padding: 30px 20px;
-  }
 
   .left .about_title {
     font-size: 24px;
@@ -206,9 +204,6 @@ body {
 
 /* Phones: max-width 480px */
 @media (max-width: 480px) {
-  .about-container {
-    padding: 20px 30px;
-  }
 
   .left .about_title {
     font-size: 30px;
@@ -692,7 +687,7 @@ body {
   height: max-content;
   background-color: #fff;
   padding: 0;
-  border-radius: 20px;
+  border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -707,7 +702,7 @@ body {
 /* Event Card Image */
 .Event_Card_img {
   width: 100%;
-  height: 300px;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -715,8 +710,8 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 /* Event Card Content */
@@ -1217,11 +1212,21 @@ body {
   background: #f8f9fa;
   padding: 30px 120px;
   border-radius: 15px;
-  overflow: hidden; 
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;  
 }
 
-.mainHeading h1 {
+
+#latestNews .News{
+ border-radius: 20px;
+  padding: 50px;
+  display: block;
+  height: max-content;
+  padding:30px 35px;
+  border: 1px solid #f5f9ff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+.News  h1 {
   color: #000;
   width: 100%;
   font-size: 30px;
@@ -1235,22 +1240,17 @@ body {
   text-shadow: 3px 3px 10px rgba(153, 116, 116, 0.3),
     -2px -2px 8px rgba(46, 34, 34, 0.5);
   line-height: 1.5;
-  margin-block: 10px;
+  margin-block: 20px;
   transition: all 0.3s ease;
 }
 
-.mainHeading h1:hover {
+ h1:hover {
   color: #fff;
   transform: scale(1.2);
   text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
   filter: brightness(1.2);
 }
 
-#latestNews .News{
- border-radius: 20px;
-  padding: 50px;
-  border: 1px solid salmon;
-}
 
 .news-list {
   list-style-type: circle;
@@ -1316,27 +1316,10 @@ body {
     padding: 30px;
   }
 }
+
 @media screen and (max-width: 768px) {
   #block-latestnews {
     padding: 30px;
-  }
-
-  .mainHeading h1 {
-    color: #000;
-    width: 100%;
-    font-size: 30px;
-    text-align: center;
-    user-select: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    transform: scale(1.5);
-    word-spacing: 5px;
-    text-shadow: 3px 3px 10px rgba(153, 116, 116, 0.3),
-      -2px -2px 8px rgba(46, 34, 34, 0.5);
-    line-height: 1.5;
-    margin-block: 10px;
-    transition: all 0.3s ease;
   }
 
   #latestNews .News {
@@ -1358,6 +1341,7 @@ body {
 
   .news-list li {
     display: inline-flex;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     font-size: 0.8rem;
@@ -1377,7 +1361,7 @@ body {
     padding: 20px;
   }
 
-  .mainHeading h1 {
+  .News h1 {
     font-size: 18px;
   }
 

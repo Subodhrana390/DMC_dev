@@ -22,7 +22,7 @@ const About = () => {
           It offers valuable networking opportunities with peers and industry
           professionals, fostering connections for future career growth.
         </p>
-        <a href="#" className="text_button">
+        <a href="/about" className="text_button">
           Learn More
         </a>
       </div>
