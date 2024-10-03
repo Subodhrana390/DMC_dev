@@ -7,7 +7,8 @@
   font-family: "Outfit", sans-serif;
 }
 body {
-  width: 100%;
+  width:100%;
+  min-height: 100vh;
 }
 
 /* Header  */
@@ -183,8 +184,7 @@ body {
 /* Small Tablets and Large Phones: max-width 576px */
 @media (max-width: 576px) {
   .about-container {
-    width: 100%;
-    padding: 15px;
+    padding: 10px 20px;
   }
 
   .left,
@@ -235,42 +235,6 @@ body {
   .right img {
     width: 200px;
   }
-}
-
-/* Join Now  */
-.Join-Now {
-  height: 200px;
-  max-width: 100%;
-  background-color: var(--navColor);
-  padding: 70px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-.Join-Now h1 {
-  color: white;
-  font-weight: 900;
-}
-
-.Join-Now a {
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--navColor);
-  background-color: white;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 20px;
-  transition: all 500ms ease;
-}
-
-.Join-Now a:hover {
-  background-color: var(--navColor);
-  color: white;
-  border: 1px solid white;
 }
 
 /* Footer  */
@@ -492,10 +456,6 @@ body {
 }
 
 /* About Section  */
-
-.heading_section {
-  background-image: url("./assets/Events/E1.png");
-}
 
 .main_about {
   width: 100%;
