@@ -12,7 +12,7 @@ const LatestUpdates = () => {
       setLoading(true);
       try {
         const response = await fetch(
-          `${import.meta.env.VITE_APP_BASE_URL}/api/v1/updates/public`,
+          `${import.meta.env.VITE_APP_BASE_URL}/updates/public`,
           {
             method: "GET",
             headers: {
