@@ -25,11 +25,12 @@ const Events = () => {
         setLoading(false);
       } catch (error) {}
     }
+    fetchData();
     Aos.init({
       duration: 1000,
       once: false,
     });
-    fetchData();
+    
   }, []);
   return (
     <div className="Events" id="events">
