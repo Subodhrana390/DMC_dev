@@ -59,7 +59,7 @@ const Events = () => {
                 <img src={event.flyer.secure_url} alt={event.flyer.original_filename} loading="lazy" />
               </div>
               <div className="Event_Card_content">
-                <div className="event_title">{event.title}</div>
+                <div className="event_title" onClick={()=>window.location.href=`/gallery/${event._id}`}>{event.title}</div>
                 <div className="event_description">
                  {event.description}
                 </div>

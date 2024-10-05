@@ -58,7 +58,7 @@ const Highlights = () => {
           data.map((event,index) => (
             <div key={index} className="col-sm-12 col-md-6  col-lg-4" data-aos={index%2==0?"fade-left":"fade-right"}>
               <img src={event.flyer.secure_url} alt="" style={styles.img} />
-              <h4 style={styles.text}>{event.title}</h4>
+              <h4 style={styles.text} onClick={()=>window.location.href=`/gallery/${event._id}`}>{event.title}</h4>
             </div>
           ))}
 

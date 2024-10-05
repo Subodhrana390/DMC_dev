@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Header from "./components/header";
 import Loader from './components/Loader'
 import "./App.css";
+import Gallery from "./pages/Gallery";
 
 // Lazy loading the pages
 const About = lazy(() => import("./pages/About"));
@@ -28,6 +29,7 @@ function App() {
           <Route path="/members" element={<Members />} />
           <Route path="/faculty" element={<Faculty />} />
           <Route path="/teams" element={<Teams />} />
+          <Route path="/gallery/:id" element={<Gallery />} />
           <Route path="/developer" element={<Developer />} />
         </Routes>
       </Suspense>
