@@ -19,7 +19,7 @@ const Teams = () => {
               <p className="card-text">
                 The Core Team is the driving force behind our organization, ensuring success through leadership and teamwork.
               </p>
-              <a href="/teams" className="btn btn-primary">
+              <a href="/members" className="btn btn-primary">
                 Meet the Core Team
               </a>
             </div>
@@ -39,7 +39,7 @@ const Teams = () => {
               <p className="card-text">
                 The Sub Core Team supports the Core Team in executing strategies and achieving goals.
               </p>
-              <a href="/teams" className="btn btn-secondary">
+              <a href="/members" className="btn btn-secondary">
                 Meet the Sub Core Team
               </a>
             </div>
