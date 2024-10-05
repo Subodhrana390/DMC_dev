@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from "react";
-import CanvaSep from "../assets/Events/canva_september.jpg";
-import RecuritAugust from "../assets/Events/recurit_August.jpg";
-import RecuritApril from "../assets/Events/recurit_April.jpg";
 import Aos from "aos";
 
 const styles = {
