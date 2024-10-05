@@ -71,7 +71,7 @@ body {
 
 /* About  */
 .about-container {
-  width: 100%;
+  width: auto;
   background-color: #f8f9fa;
   display: flex;
   justify-content: space-between;
@@ -215,6 +215,7 @@ body {
 /* Phones: max-width 480px */
 @media (max-width: 480px) {
   .about-container {
+    width: fit-content;
     padding: 10px;
   }
 
@@ -1326,6 +1327,7 @@ h1:hover {
 }
 @media screen and (max-width: 480px) {
   #block-latestnews {
+    width: fit-content;
     padding: 20px;
   }
 
@@ -1352,7 +1354,7 @@ h1:hover {
 }
 
 #highlights {
-  max-width: 100%;
+  width: auto;
   padding: 70px 120px;
   background-color: #f8f9fa;
   min-height: 400px;
@@ -1406,6 +1408,7 @@ h1:hover {
 
 @media (max-width: 480px) {
   #highlights {
+    width: fit-content;
     padding: 5px 10px;
   }
   #highlights .heading {

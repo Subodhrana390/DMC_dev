@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import BlogWritting from "../assets/Events/Blog_writting.jpg";
 import CanvaMArch from "../assets/Events/Canva_march.jpg";
 import Reel from "../assets/Events/Reel_video.jpg";
@@ -6,11 +6,33 @@ import { useEffect } from "react";
 import Aos from "aos";
 
 const Events = () => {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
+    async function fetchData() {
+      setLoading(true);
+      try {
+        const response = await fetch(
+          `${import.meta.env.VITE_APP_BASE_URL}/event?featured=false`,
+          {
+            method: "GET",
+            headers: {
+              "x-authorization": import.meta.env.VITE_APP_X_AUTHORIZATION,
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        const data = await response.json();
+        console.log(data);
+        setData(data);
+        setLoading(false);
+      } catch (error) {}
+    }
     Aos.init({
       duration: 1000,
       once: false,
     });
+    fetchData();
   }, []);
   return (
     <div className="Events" id="events">
@@ -30,44 +52,22 @@ const Events = () => {
         </p>
       </div>
       <div className="event_List row g-4">
-        <div className="Event_Card col-sm-3" data-aos="fade-left">
-          <div className="Event_Card_img">
-            <img src={CanvaMArch} alt="" loading="lazy" />
-          </div>
-          <div className="Event_Card_content">
-            <div className="event_title">Canva Workshop</div>
-            <div className="event_description">
-              The Canva workshop offers hands-on training in graphic design,
-              enabling participants to create visually stunning content using
-              Canva's intuitive tools.
+        {!loading &&
+          data &&
+          data.length > 0 &&
+          data.map((event) => (
+            <div className="Event_Card col-sm-3" data-aos="fade-left">
+              <div className="Event_Card_img">
+                <img src={event.flyer.secure_url} alt={event.flyer.original_filename} loading="lazy" />
+              </div>
+              <div className="Event_Card_content">
+                <div className="event_title">{event.title}</div>
+                <div className="event_description">
+                 {event.description}
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="Event_Card col-sm-3" data-aos="fade-right">
-          <div className="Event_Card_img">
-            <img src={Reel} alt="" loading="lazy" />
-          </div>
-          <div className="Event_Card_content">
-            <div className="event_title">Reel Making Competition</div>
-            <div className="event_description">
-              The Reel Making Competition challenges participants to create
-              engaging, creative short videos that captivate audiences.
-            </div>
-          </div>
-        </div>
-        <div className="Event_Card col-sm-3" data-aos="fade-left">
-          <div className="Event_Card_img">
-            <img src={BlogWritting} alt="" loading="lazy" />
-          </div>
-          <div className="Event_Card_content">
-            <div className="event_title">blog writing competition</div>
-            <div className="event_description">
-              The Blog Writing Competition invites participants to showcase
-              their writing skills by crafting compelling and insightful blog
-              posts.
-            </div>
-          </div>
-        </div>
+          ))}
       </div>
     </div>
   );

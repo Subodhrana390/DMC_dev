@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import CanvaSep from "../assets/Events/canva_september.jpg";
 import RecuritAugust from "../assets/Events/recurit_August.jpg";
 import RecuritApril from "../assets/Events/recurit_April.jpg";
@@ -22,7 +22,29 @@ const styles = {
   },
 };
 const Highlights = () => {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
+    async function fetchData() {
+      setLoading(true);
+      try {
+        const response = await fetch(
+          `${import.meta.env.VITE_APP_BASE_URL}/event?featured=true`,
+          {
+            method: "GET",
+            headers: {
+              "x-authorization": import.meta.env.VITE_APP_X_AUTHORIZATION,
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        const data = await response.json();
+        console.log(data);
+        setData(data);
+        setLoading(false);
+      } catch (error) {}
+    }
+    fetchData();
     Aos.init({
       duration: 1000,
       once: false,
@@ -32,20 +54,18 @@ const Highlights = () => {
     <section id="highlights">
       <h4 className="heading">Highlights</h4>
       <div className="container my-4">
-        <div className="row g-4 justify-content-md-center">
-          <div className="col-sm-12 col-md-6  col-lg-4" data-aos="fade-left">
-            <img src={CanvaSep} alt="" style={styles.img} />
-            <h4 style={styles.text}>Canva Events (25th Sep) </h4>
-          </div>
-          <div className="col-sm-12 col-md-6  col-lg-4" data-aos="fade-right">
-            <img src={RecuritAugust} alt="" style={styles.img} />
-            <h4 style={styles.text}>New Recruitment 2024 (August)</h4>
-          </div>
-          <div className="col-sm-12 col-md-6  col-lg-4" data-aos="fade-right">
-            <img src={RecuritApril} alt="" style={styles.img} />
-            <h4 style={styles.text}>New Recruitment 2024 (April)</h4>
-          </div>
-        </div>
+        <div className="row g-4">
+        {!loading &&
+          data &&
+          data.length > 0 &&
+          data.map((event,index) => (
+            <div key={index} className="col-sm-12 col-md-6  col-lg-4" data-aos={index%2==0?"fade-left":"fade-right"}>
+              <img src={event.flyer.secure_url} alt="" style={styles.img} />
+              <h4 style={styles.text}>{event.title}</h4>
+            </div>
+          ))}
+
+      </div>
       </div>
       <button onClick={() => (window.location.href = "/events")}>
         Past Events
