@@ -52,32 +52,17 @@ const Highlights = () => {
       <h4 className="heading">Highlights</h4>
       <div className="container my-4">
         <div className="row g-4">
-          {loading ? (
-            <div className="d-inline-flex justify-content-center">
-              <div className="loader"></div>
+        {!loading &&
+          data &&
+          data.length > 0 &&
+          data.map((event,index) => (
+            <div key={index} className="col-sm-12 col-md-6  col-lg-4" data-aos={index%2==0?"fade-left":"fade-right"}>
+              <img src={event.flyer.secure_url} alt="" style={styles.img} />
+              <h4 style={styles.text} onClick={()=>window.location.href=`/gallery/${event._id}`}>{event.title}</h4>
             </div>
-          ) : (
-            data &&
-            data.length > 0 &&
-            data.map((event, index) => (
-              <div
-                key={index}
-                className="col-sm-12 col-md-6  col-lg-4"
-                data-aos={index % 2 == 0 ? "fade-left" : "fade-right"}
-              >
-                <img src={event.flyer.secure_url} alt="" style={styles.img} />
-                <h4
-                  style={styles.text}
-                  onClick={() =>
-                    (window.location.href = `/gallery/${event._id}`)
-                  }
-                >
-                  {event.title}
-                </h4>
-              </div>
-            ))
-          )}
-        </div>
+          ))}
+
+      </div>
       </div>
       <button onClick={() => (window.location.href = "/events")}>
         Past Events
