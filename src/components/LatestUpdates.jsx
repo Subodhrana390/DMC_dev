@@ -1,4 +1,3 @@
-
 import Aos from "aos";
 import React, { useEffect, useState } from "react";
 import { MdFiberNew } from "react-icons/md";
@@ -64,29 +63,35 @@ const LatestUpdates = () => {
       <div className="block-content">
         <div id="latestNews">
           <div className="News">
-          <h1>Notice Board</h1>
+            <h1>Notice Board</h1>
             <ul className="news-list">
-              {!loading &&
-          updates &&
-          updates.length > 0 && updates.map((update, index) => (
-                <li key={index}>
-                  {update.isNew && (
-                    <span>
-                      <MdFiberNew color="#FFD700" size={30} />
-                    </span>
-                  )}
-                  {update.title}
-                  {update.link && (
-                    <a
-                      href={update.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Learn more
-                    </a>
-                  )}
-                </li>
-              ))}
+              {loading ? (
+                <div className="d-inline-flex justify-content-center">
+                  <div className="loader"></div>
+                </div>
+              ) : (
+                updates &&
+                updates.length > 0 &&
+                updates.map((update, index) => (
+                  <li key={index}>
+                    {update.isNew && (
+                      <span>
+                        <MdFiberNew color="#FFD700" size={30} />
+                      </span>
+                    )}
+                    {update.title}
+                    {update.link && (
+                      <a
+                        href={update.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Learn more
+                      </a>
+                    )}
+                  </li>
+                ))
+              )}
             </ul>
           </div>
         </div>

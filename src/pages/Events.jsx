@@ -30,7 +30,6 @@ const Events = () => {
       duration: 1000,
       once: false,
     });
-    
   }, []);
   return (
     <div className="Events" id="events">
@@ -50,22 +49,36 @@ const Events = () => {
         </p>
       </div>
       <div className="event_List row g-4">
-        {!loading &&
+        {loading ? (
+          <div className="d-inline-flex justify-content-center">
+            <div className="loader"></div>
+          </div>
+        ) : (
           data &&
           data.length > 0 &&
           data.map((event) => (
             <div className="Event_Card col-sm-3" data-aos="fade-left">
               <div className="Event_Card_img">
-                <img src={event.flyer.secure_url} alt={event.flyer.original_filename} loading="lazy" />
+                <img
+                  src={event.flyer.secure_url}
+                  alt={event.flyer.original_filename}
+                  loading="lazy"
+                />
               </div>
               <div className="Event_Card_content">
-                <div className="event_title" onClick={()=>window.location.href=`/gallery/${event._id}`}>{event.title}</div>
-                <div className="event_description">
-                 {event.description}
+                <div
+                  className="event_title"
+                  onClick={() =>
+                    (window.location.href = `/gallery/${event._id}`)
+                  }
+                >
+                  {event.title}
                 </div>
+                <div className="event_description">{event.description}</div>
               </div>
             </div>
-          ))}
+          ))
+        )}
       </div>
     </div>
   );
