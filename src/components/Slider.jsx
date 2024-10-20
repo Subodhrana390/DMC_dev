@@ -4,6 +4,7 @@ import Slide2 from "../assets/Events/Scanned_20240925-1846-26.jpg";
 
 const Slider = () => {
   return (
+    <div className="Slider">
     <div
       id="carouselExampleIndicators"
       className="carousel slide"
@@ -26,6 +27,7 @@ const Slider = () => {
           aria-label="Slide 2"
         ></button>
       </div>
+  
       <div className="carousel-inner">
         <div className="carousel-item active">
           <img
@@ -35,10 +37,11 @@ const Slider = () => {
             style={{ height: "auto", maxHeight: "500px", objectFit: "cover" }}
           />
           <div className="carousel-caption-overlay">
-            <h1>Canva Workshop (March, 2024 )</h1>
+            <h1>Canva Workshop (March, 2024)</h1>
             <p></p>
           </div>
         </div>
+  
         <div className="carousel-item">
           <img
             src={Slide2}
@@ -52,6 +55,7 @@ const Slider = () => {
           </div>
         </div>
       </div>
+  
       <button
         className="carousel-control-prev"
         type="button"
@@ -61,6 +65,7 @@ const Slider = () => {
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Previous</span>
       </button>
+  
       <button
         className="carousel-control-next"
         type="button"
@@ -71,6 +76,8 @@ const Slider = () => {
         <span className="visually-hidden">Next</span>
       </button>
     </div>
+  </div>
+  
   );
 };
 

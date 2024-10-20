@@ -7,7 +7,7 @@
   font-family: "Outfit", sans-serif;
 }
 body {
-  width:100%;
+  width: 100%;
   min-height: 100vh;
 }
 
@@ -71,17 +71,17 @@ body {
 
 /* About  */
 .about-container {
-  width: auto;
+  width: 100%;
   background-color: #f8f9fa;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 150px;
+  padding: 50px 120px;
 }
 
 .left,
 .right {
-  width: 50%;
+  flex: 1 1;
 }
 
 .left {
@@ -215,8 +215,8 @@ body {
 /* Phones: max-width 480px */
 @media (max-width: 480px) {
   .about-container {
-    width: fit-content;
-    padding: 10px;
+    width: auto;
+    padding: 20px;
   }
 
   .left .about_title {
@@ -1137,6 +1137,11 @@ body {
 }
 
 /* Slider  */
+.Slider{
+  width: auto;
+  position: relative;
+  white-space: nowrap;
+}
 .carousel-caption-overlay {
   position: absolute;
   top: 0;
@@ -1180,10 +1185,9 @@ body {
 
 /* Latest Updates  */
 #block-latestnews {
-  width: 100%;
+  width: auto;
   background: #f8f9fa;
   padding: 30px 120px;
-  border-radius: 15px;
   overflow: hidden;
 }
 
@@ -1327,7 +1331,6 @@ h1:hover {
 }
 @media screen and (max-width: 480px) {
   #block-latestnews {
-    width: fit-content;
     padding: 20px;
   }
 
@@ -1408,7 +1411,6 @@ h1:hover {
 
 @media (max-width: 480px) {
   #highlights {
-    width: fit-content;
     padding: 5px 10px;
   }
   #highlights .heading {
@@ -1429,14 +1431,15 @@ h1:hover {
 /* Our Team  */
 
 .our_features {
+  width: 100%;
   padding: 30px 120px;
-  background-color: #f7f7f7;
+  background-color: #f9f9f9;
 }
 
-.our_features .feature_card {
+.feature_card {
   height: 250px;
   min-height: 250px;
-  padding: 35px 25px;
+  padding: 35px 20px;
   background-color: transparent;
   border: 1px solid #f5f9ff;
   border-radius: 10px;
@@ -1491,6 +1494,12 @@ h1:hover {
     text-align: center;
     font-weight: 600;
     line-height: 150%;
+  }
+}
+
+@media (max-width: 480px) {
+  .our_features {
+    width: auto;
   }
 }
 

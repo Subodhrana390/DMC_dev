@@ -12,8 +12,8 @@ const About = () => {
 
   return (
     <>
-      <div className="about-container" id="about">
-        <div className="left" data-aos="fade-right">
+      <div className="about-container">
+        <div className="left">
           <h1 className="about_title">About DMC</h1>
           <p className="about_description">
             The Digital Marketing Club at Guru Nanak Dev Engineering College
@@ -22,8 +22,7 @@ const About = () => {
             opportunity for members to engage in interactive learning
             experiences and stay abreast of the latest trends in the digital
             marketing space, including SEO, social media strategies, content
-            marketing, and data analytics. <br />
-            <br />
+            marketing, and data analytics.
             The Digital Marketing Club at GNDEC emphasizes the importance of
             collaboration, enabling students to work together on innovative
             projects while also networking with professionals and alumni in the
@@ -40,14 +39,14 @@ const About = () => {
             Learn More
           </a>
         </div>
-        <div className="right" data-aos="fade-left">
+        <div className="right">
           <img src={Logo} alt="DMC Logo" loading="lazy" />
         </div>
       </div>
 
-      <div className="row our_features">
+      <div className="row g-0 our_features">
         <div className="col-sm-12 col-md-6">
-          <div className="feature_card" data-aos="fade-left">
+          <div className="feature_card">
             <h3>Our Vision</h3>
             <p>
               To create a thriving community of innovative digital marketers,
@@ -58,7 +57,7 @@ const About = () => {
           </div>
         </div>
         <div className="col-sm-12 col-md-6">
-          <div className="feature_card" data-aos="fade-right">
+          <div className="feature_card">
             <h3>Our Mission</h3>
             <p>
               To empower students with the latest digital marketing skills and
@@ -69,7 +68,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="row g-0" data-aos="fade-left">
+      <div className="row g-0">
         <div className="col-sm-12 col-md-6 col-lg-3">
           <div className="count_card">
             <h5>Faculty Member</h5>
