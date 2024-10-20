@@ -52,7 +52,9 @@ const Highlights = () => {
       <h4 className="heading">Highlights</h4>
       <div className="container my-4">
         <div className="row g-4">
-        {!loading &&
+        {loading?   <div className="d-inline-flex justify-content-center">
+            <div className="loader"></div>
+          </div>:
           data &&
           data.length > 0 &&
           data.map((event,index) => (

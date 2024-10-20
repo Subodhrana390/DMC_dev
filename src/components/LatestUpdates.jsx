@@ -23,7 +23,7 @@ const LatestUpdates = () => {
         const data = await response.json();
         setUpdates(data.updates);
         setLoading(false);
-      } catch (error) {}
+      } catch (error) { }
     }
     Aos.init({
       duration: 1000,
@@ -65,11 +65,7 @@ const LatestUpdates = () => {
           <div className="News">
             <h1>Notice Board</h1>
             <ul className="news-list">
-              {loading ? (
-                <div className="d-inline-flex justify-content-center">
-                  <div className="loader"></div>
-                </div>
-              ) : (
+              {!loading && (
                 updates &&
                 updates.length > 0 &&
                 updates.map((update, index) => (
