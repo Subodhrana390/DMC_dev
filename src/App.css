@@ -1139,6 +1139,7 @@ body {
 /* Slider  */
 .Slider{
   width: auto;
+  overflow-x:hidden;
   position: relative;
   white-space: nowrap;
 }
