@@ -1411,6 +1411,7 @@ h1:hover {
 
 @media (max-width: 480px) {
   #highlights {
+    overflow:hidden;
     padding: 5px 10px;
   }
   #highlights .heading {
