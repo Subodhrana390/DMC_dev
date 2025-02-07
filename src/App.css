@@ -1139,10 +1139,6 @@ body {
 /* Slider  */
 .Slider{
   width: auto;
-<<<<<<< HEAD
-  overflow-x:hidden;
-=======
->>>>>>> 6073ac9 (feat : links updated)
   position: relative;
   white-space: nowrap;
 }
@@ -1415,10 +1411,6 @@ h1:hover {
 
 @media (max-width: 480px) {
   #highlights {
-<<<<<<< HEAD
-    overflow:hidden;
-=======
->>>>>>> 6073ac9 (feat : links updated)
     padding: 5px 10px;
   }
   #highlights .heading {
