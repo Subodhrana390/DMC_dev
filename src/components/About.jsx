@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from "react";
 import Logo from "../assets/Logo.png";
 import Aos from "aos";
@@ -12,6 +13,15 @@ const About = () => {
   return (
     <div className="about-container">
       <div className="left" data-aos="fade-left">
+=======
+import React from "react";
+import Logo from "../assets/Logo.png";
+
+const About = () => {
+  return (
+    <div className="about-container">
+      <div className="left">
+>>>>>>> 6073ac9 (feat : links updated)
         <h1 className="about_title">About DMC</h1>
         <p className="about_description">
           The Digital Marketing Club empowers members with hands-on experience

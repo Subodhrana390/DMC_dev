@@ -1,7 +1,11 @@
 import Logo from "../assets/Logo.png";
 import GNDEC_Logo from "../assets/GNDEC_Logo.png";
 import { FaFacebook, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
+<<<<<<< HEAD
 import { IoMdMail, IoMdMap } from "react-icons/io";
+=======
+import { IoMdMail } from "react-icons/io";
+>>>>>>> 6073ac9 (feat : links updated)
 
 const Footer = () => {
   return (
@@ -54,7 +58,10 @@ const Footer = () => {
             <div className="Links">
               <h4>Links</h4>
               <a href="/faculty">Faculty</a>
+<<<<<<< HEAD
               <a href="/members">Members</a>
+=======
+>>>>>>> 6073ac9 (feat : links updated)
               <a href="/developer">Web Developer</a>
             </div>
           </div>

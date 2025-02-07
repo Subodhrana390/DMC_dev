@@ -20,7 +20,10 @@ const Events = () => {
           }
         );
         const data = await response.json();
+<<<<<<< HEAD
         console.log(data);
+=======
+>>>>>>> 6073ac9 (feat : links updated)
         setData(data);
         setLoading(false);
       } catch (error) {}
