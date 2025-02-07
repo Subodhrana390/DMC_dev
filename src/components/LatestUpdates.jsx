@@ -25,13 +25,6 @@ const LatestUpdates = () => {
         setLoading(false);
       } catch (error) { }
     }
-<<<<<<< HEAD
-    Aos.init({
-      duration: 1000,
-      once: false,
-    });
-=======
->>>>>>> 6073ac9 (feat : links updated)
     fetchData();
   }, []);
   // const updates = [
@@ -62,11 +55,7 @@ const LatestUpdates = () => {
   // ];
 
   return (
-<<<<<<< HEAD
-    <div id="block-latestnews" className="block" data-aos="fade-left">
-=======
     <div id="block-latestnews" className="block">
->>>>>>> 6073ac9 (feat : links updated)
       <div className="block-content">
         <div id="latestNews">
           <div className="News">

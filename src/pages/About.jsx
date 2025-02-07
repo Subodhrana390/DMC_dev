@@ -3,13 +3,6 @@ import AOS from "aos";
 import Logo from "../assets/Logo.png";
 
 const About = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: false,
-    });
-  }, []);
-
   return (
     <>
       <div className="about-container">
